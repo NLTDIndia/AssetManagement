@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssetManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AssetAllocation">
+    <Key>
+      <PropertyRef Name="AssetAllocationId" />
+    </Key>
+    <Property Name="AssetAllocationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetId" Type="Int64" />
+    <Property Name="LocationId" Type="Int64" />
+    <Property Name="EmployeeId" Type="Int64" />
+    <Property Name="AssetAllocatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AssetCanceledOn" Type="DateTime" Precision="3" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Asset" Relationship="Self.FK__AssetAllo__Asset__44CA3770" FromRole="AssetAllocation" ToRole="Assets" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__AssetAllo__Emplo__46B27FE2" FromRole="AssetAllocation" ToRole="Employee" />
+    <NavigationProperty Name="AssetLocation" Relationship="Self.FK__AssetAllo__Locat__45BE5BA9" FromRole="AssetAllocation" ToRole="AssetLocation" />
+  </EntityType>
+  <EntityType Name="AssetCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetTypes" Relationship="Self.FK__AssetType__Asset__3B75D760" FromRole="AssetCategory" ToRole="AssetType" />
+    <NavigationProperty Name="AssetTypes1" Relationship="Self.FK__AssetType__Asset__5070F446" FromRole="AssetCategory" ToRole="AssetType" />
+  </EntityType>
+  <EntityType Name="AssetDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AlterFileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Entity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EntityId" Type="Int64" />
+    <Property Name="FilePath" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AssetLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="550" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetAllocations" Relationship="Self.FK__AssetAllo__Locat__45BE5BA9" FromRole="AssetLocation" ToRole="AssetAllocation" />
+    <NavigationProperty Name="AssetRequests" Relationship="Self.FK__AssetRequ__Locat__36B12243" FromRole="AssetLocation" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequests1" Relationship="Self.FK__AssetRequ__Locat__4BAC3F29" FromRole="AssetLocation" ToRole="AssetRequest" />
+  </EntityType>
+  <EntityType Name="AssetPaymentMode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="AssetRequestPayments" Relationship="Self.FK__AssetRequ__Payme__38996AB5" FromRole="AssetPaymentMode" ToRole="AssetRequestPayments" />
+    <NavigationProperty Name="AssetRequestPayments1" Relationship="Self.FK__AssetRequ__Payme__4D94879B" FromRole="AssetPaymentMode" ToRole="AssetRequestPayments" />
+  </EntityType>
+  <EntityType Name="AssetQuotation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetRequestId" Type="Int64" />
+    <Property Name="AssetVendorId" Type="Int64" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Quantity" Type="Int64" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Documents" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CGST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SGST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetVendor" Relationship="Self.FK__AssetQuot__Asset__571DF1D5" FromRole="AssetQuotation" ToRole="AssetVendors" />
+    <NavigationProperty Name="AssetRequest" Relationship="Self.FK__AssetQuot__Asset__66603565" FromRole="AssetQuotation" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequests" Relationship="Self.FK__AssetRequ__Asset__6A30C649" FromRole="AssetQuotation" ToRole="AssetRequest" />
+  </EntityType>
+  <EntityType Name="AssetQuoteApproval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetQuotationId" Type="Int64" />
+    <Property Name="ApprovedBy" Type="Int32" />
+    <Property Name="ApprovedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsAwaitingNextApproval" Type="Boolean" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AssetRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetTypeId" Type="Int64" />
+    <Property Name="LocationId" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="AssetQuotationId" Type="Int64" />
+    <Property Name="PONumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ARNumber" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="AssetStatusId" Type="Int64" />
+    <Property Name="Quantity" Type="Int64" />
+    <Property Name="Comments" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetLocation" Relationship="Self.FK__AssetRequ__Locat__36B12243" FromRole="AssetRequest" ToRole="AssetLocation" />
+    <NavigationProperty Name="AssetLocation1" Relationship="Self.FK__AssetRequ__Locat__4BAC3F29" FromRole="AssetRequest" ToRole="AssetLocation" />
+    <NavigationProperty Name="AssetQuotations" Relationship="Self.FK__AssetQuot__Asset__66603565" FromRole="AssetRequest" ToRole="AssetQuotation" />
+    <NavigationProperty Name="AssetQuotation" Relationship="Self.FK__AssetRequ__Asset__6A30C649" FromRole="AssetRequest" ToRole="AssetQuotation" />
+    <NavigationProperty Name="AssetType" Relationship="Self.FK__AssetRequ__Asset__34C8D9D1" FromRole="AssetRequest" ToRole="AssetType" />
+    <NavigationProperty Name="AssetStatu" Relationship="Self.FK__AssetRequ__Asset__35BCFE0A" FromRole="AssetRequest" ToRole="AssetStatus" />
+    <NavigationProperty Name="AssetRequestPayments" Relationship="Self.FK__AssetRequ__Asset__37A5467C" FromRole="AssetRequest" ToRole="AssetRequestPayments" />
+    <NavigationProperty Name="AssetRequestSpecifications" Relationship="Self.FK__AssetRequ__Asset__398D8EEE" FromRole="AssetRequest" ToRole="AssetRequestSpecification" />
+    <NavigationProperty Name="AssetType1" Relationship="Self.FK__AssetRequ__Asset__49C3F6B7" FromRole="AssetRequest" ToRole="AssetType" />
+    <NavigationProperty Name="AssetStatu1" Relationship="Self.FK__AssetRequ__Asset__4AB81AF0" FromRole="AssetRequest" ToRole="AssetStatus" />
+    <NavigationProperty Name="AssetRequestPayments1" Relationship="Self.FK__AssetRequ__Asset__4CA06362" FromRole="AssetRequest" ToRole="AssetRequestPayments" />
+    <NavigationProperty Name="AssetRequestSpecifications1" Relationship="Self.FK__AssetRequ__Asset__4E88ABD4" FromRole="AssetRequest" ToRole="AssetRequestSpecification" />
+    <NavigationProperty Name="Assets" Relationship="Self.FK__Assets__AssetReq__3B40CD36" FromRole="AssetRequest" ToRole="Assets" />
+  </EntityType>
+  <EntityType Name="AssetRequestPayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="AssetRequestId" Type="Int64" />
+    <Property Name="PaymentModeId" Type="Int64" />
+    <Property Name="BaseAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Tax" Type="Int32" />
+    <Property Name="Amount" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentDate" Type="DateTime" Precision="0" />
+    <Property Name="CreditCardNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreditCardOwner" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeDate" Type="DateTime" Precision="0" />
+    <Property Name="ChequeBankName" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ChequeBranch" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DC_TransactionIdentifier" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DC_Transferer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetPaymentMode" Relationship="Self.FK__AssetRequ__Payme__38996AB5" FromRole="AssetRequestPayments" ToRole="AssetPaymentMode" />
+    <NavigationProperty Name="AssetPaymentMode1" Relationship="Self.FK__AssetRequ__Payme__4D94879B" FromRole="AssetRequestPayments" ToRole="AssetPaymentMode" />
+    <NavigationProperty Name="AssetRequest" Relationship="Self.FK__AssetRequ__Asset__37A5467C" FromRole="AssetRequestPayments" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequest1" Relationship="Self.FK__AssetRequ__Asset__4CA06362" FromRole="AssetRequestPayments" ToRole="AssetRequest" />
+  </EntityType>
+  <EntityType Name="AssetRequestSpecification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetRequestId" Type="Int64" />
+    <Property Name="AssetTypeSpecId" Type="Int64" />
+    <Property Name="AssetTypeSpecValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetRequest" Relationship="Self.FK__AssetRequ__Asset__398D8EEE" FromRole="AssetRequestSpecification" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequest1" Relationship="Self.FK__AssetRequ__Asset__4E88ABD4" FromRole="AssetRequestSpecification" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetTypeSpecification" Relationship="Self.FK__AssetRequ__Asset__3A81B327" FromRole="AssetRequestSpecification" ToRole="AssetTypeSpecification" />
+    <NavigationProperty Name="AssetTypeSpecification1" Relationship="Self.FK__AssetRequ__Asset__4F7CD00D" FromRole="AssetRequestSpecification" ToRole="AssetTypeSpecification" />
+  </EntityType>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="AssetId" />
+    </Key>
+    <Property Name="AssetId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetTagNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AssetRequestId" Type="Int64" />
+    <Property Name="Price" Type="Int64" />
+    <Property Name="PurchaseOrderOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ServiceTagNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetAllocations" Relationship="Self.FK__AssetAllo__Asset__44CA3770" FromRole="Assets" ToRole="AssetAllocation" />
+    <NavigationProperty Name="AssetRequest" Relationship="Self.FK__Assets__AssetReq__3B40CD36" FromRole="Assets" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetSpecifications" Relationship="Self.FK__AssetSpec__Asset__3F115E1A" FromRole="Assets" ToRole="AssetSpecification" />
+  </EntityType>
+  <EntityType Name="AssetSpecification">
+    <Key>
+      <PropertyRef Name="AssetSpecId" />
+    </Key>
+    <Property Name="AssetSpecId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetId" Type="Int64" />
+    <Property Name="AssetTypeId" Type="Int64" />
+    <Property Name="AssetTypeSpecId" Type="Int64" />
+    <Property Name="AssetTypeSpecValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="Asset" Relationship="Self.FK__AssetSpec__Asset__3F115E1A" FromRole="AssetSpecification" ToRole="Assets" />
+    <NavigationProperty Name="AssetType" Relationship="Self.FK__AssetSpec__Asset__4D5F7D71" FromRole="AssetSpecification" ToRole="AssetType" />
+    <NavigationProperty Name="AssetTypeSpecification" Relationship="Self.FK__AssetSpec__Asset__74794A92" FromRole="AssetSpecification" ToRole="AssetTypeSpecification" />
+  </EntityType>
+  <EntityType Name="AssetStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetRequests" Relationship="Self.FK__AssetRequ__Asset__35BCFE0A" FromRole="AssetStatus" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequests1" Relationship="Self.FK__AssetRequ__Asset__4AB81AF0" FromRole="AssetStatus" ToRole="AssetRequest" />
+  </EntityType>
+  <EntityType Name="AssetType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssetCategoryId" Type="Int64" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetCategory" Relationship="Self.FK__AssetType__Asset__3B75D760" FromRole="AssetType" ToRole="AssetCategory" />
+    <NavigationProperty Name="AssetCategory1" Relationship="Self.FK__AssetType__Asset__5070F446" FromRole="AssetType" ToRole="AssetCategory" />
+    <NavigationProperty Name="AssetRequests" Relationship="Self.FK__AssetRequ__Asset__34C8D9D1" FromRole="AssetType" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetRequests1" Relationship="Self.FK__AssetRequ__Asset__49C3F6B7" FromRole="AssetType" ToRole="AssetRequest" />
+    <NavigationProperty Name="AssetSpecifications" Relationship="Self.FK__AssetSpec__Asset__4D5F7D71" FromRole="AssetType" ToRole="AssetSpecification" />
+    <NavigationProperty Name="AssetTypeSpecifications" Relationship="Self.FK__AssetType__Asset__3C69FB99" FromRole="AssetType" ToRole="AssetTypeSpecification" />
+    <NavigationProperty Name="AssetTypeSpecifications1" Relationship="Self.FK__AssetType__Asset__5165187F" FromRole="AssetType" ToRole="AssetTypeSpecification" />
+  </EntityType>
+  <EntityType Name="AssetTypeSpecification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssetTypeId" Type="Int64" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ValueType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetRequestSpecifications" Relationship="Self.FK__AssetRequ__Asset__3A81B327" FromRole="AssetTypeSpecification" ToRole="AssetRequestSpecification" />
+    <NavigationProperty Name="AssetRequestSpecifications1" Relationship="Self.FK__AssetRequ__Asset__4F7CD00D" FromRole="AssetTypeSpecification" ToRole="AssetRequestSpecification" />
+    <NavigationProperty Name="AssetSpecifications" Relationship="Self.FK__AssetSpec__Asset__74794A92" FromRole="AssetTypeSpecification" ToRole="AssetSpecification" />
+    <NavigationProperty Name="AssetType" Relationship="Self.FK__AssetType__Asset__3C69FB99" FromRole="AssetTypeSpecification" ToRole="AssetType" />
+    <NavigationProperty Name="AssetType1" Relationship="Self.FK__AssetType__Asset__5165187F" FromRole="AssetTypeSpecification" ToRole="AssetType" />
+  </EntityType>
+  <EntityType Name="AssetVendor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LandLineNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <NavigationProperty Name="AssetQuotations" Relationship="Self.FK__AssetQuot__Asset__571DF1D5" FromRole="AssetVendors" ToRole="AssetQuotation" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoginId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeId" Type="Int64" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AvatarUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingToId" Type="Int64" />
+    <Property Name="OfficeHolidayId" Type="Int64" />
+    <Property Name="EmployeeRoleId" Type="Int64" />
+    <Property Name="IsHandleMembers" Type="Boolean" />
+    <Property Name="IsInProbationaryPeriod" Type="Boolean" />
+    <Property Name="CanAvailYearlyLeave" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int64" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShiftID" Type="Int32" />
+    <Property Name="CardID" Type="Int64" />
+    <Property Name="DOJ" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationDate" Type="DateTime" Precision="3" />
+    <Property Name="RelievingDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="AssetAllocations" Relationship="Self.FK__AssetAllo__Emplo__46B27FE2" FromRole="Employee" ToRole="AssetAllocation" />
+  </EntityType>
+  <EntityType Name="AvailableAsset">
+    <Key>
+      <PropertyRef Name="AssetId" />
+      <PropertyRef Name="AssetType" />
+      <PropertyRef Name="AssetCategory" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="Location" />
+      <PropertyRef Name="locationId" />
+      <PropertyRef Name="empId" />
+      <PropertyRef Name="AssetAllocationId" />
+    </Key>
+    <Property Name="AssetId" Type="Int64" Nullable="false" />
+    <Property Name="AssetTagNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AssetType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssetCategory" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="550" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="locationId" Type="Int64" Nullable="false" />
+    <Property Name="empId" Type="Int64" Nullable="false" />
+    <Property Name="AssetAllocationId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UnallocatedAsset">
+    <Key>
+      <PropertyRef Name="AssetId" />
+      <PropertyRef Name="AssetType" />
+      <PropertyRef Name="AssetCategory" />
+    </Key>
+    <Property Name="AssetId" Type="Int64" Nullable="false" />
+    <Property Name="AssetTagNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceTagNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AssetRequestId" Type="Int64" />
+    <Property Name="AssetType" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AssetCategory" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__AssetAllo__Asset__44CA3770">
+    <End Role="Assets" Type="Self.Asset" Multiplicity="0..1" />
+    <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assets">
+        <PropertyRef Name="AssetId" />
+      </Principal>
+      <Dependent Role="AssetAllocation">
+        <PropertyRef Name="AssetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetAllo__Emplo__46B27FE2">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="AssetAllocation">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetAllo__Locat__45BE5BA9">
+    <End Role="AssetLocation" Type="Self.AssetLocation" Multiplicity="0..1" />
+    <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetAllocation">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetType__Asset__3B75D760">
+    <End Role="AssetCategory" Type="Self.AssetCategory" Multiplicity="0..1" />
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetType">
+        <PropertyRef Name="AssetCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetType__Asset__5070F446">
+    <End Role="AssetCategory" Type="Self.AssetCategory" Multiplicity="0..1" />
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetType">
+        <PropertyRef Name="AssetCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Locat__36B12243">
+    <End Role="AssetLocation" Type="Self.AssetLocation" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Locat__4BAC3F29">
+    <End Role="AssetLocation" Type="Self.AssetLocation" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Payme__38996AB5">
+    <End Role="AssetPaymentMode" Type="Self.AssetPaymentMode" Multiplicity="0..1" />
+    <End Role="AssetRequestPayments" Type="Self.AssetRequestPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetPaymentMode">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestPayments">
+        <PropertyRef Name="PaymentModeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Payme__4D94879B">
+    <End Role="AssetPaymentMode" Type="Self.AssetPaymentMode" Multiplicity="0..1" />
+    <End Role="AssetRequestPayments" Type="Self.AssetRequestPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetPaymentMode">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestPayments">
+        <PropertyRef Name="PaymentModeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetQuot__Asset__571DF1D5">
+    <End Role="AssetVendors" Type="Self.AssetVendor" Multiplicity="0..1" />
+    <End Role="AssetQuotation" Type="Self.AssetQuotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetVendors">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetQuotation">
+        <PropertyRef Name="AssetVendorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetQuot__Asset__66603565">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="AssetQuotation" Type="Self.AssetQuotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetQuotation">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__6A30C649">
+    <End Role="AssetQuotation" Type="Self.AssetQuotation" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetQuotation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="AssetQuotationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__34C8D9D1">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__35BCFE0A">
+    <End Role="AssetStatus" Type="Self.AssetStatu" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="AssetStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__37A5467C">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="AssetRequestPayments" Type="Self.AssetRequestPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestPayments">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__398D8EEE">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="AssetRequestSpecification" Type="Self.AssetRequestSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestSpecification">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__49C3F6B7">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__4AB81AF0">
+    <End Role="AssetStatus" Type="Self.AssetStatu" Multiplicity="0..1" />
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequest">
+        <PropertyRef Name="AssetStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__4CA06362">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="AssetRequestPayments" Type="Self.AssetRequestPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestPayments">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__4E88ABD4">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="AssetRequestSpecification" Type="Self.AssetRequestSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestSpecification">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Assets__AssetReq__3B40CD36">
+    <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
+    <End Role="Assets" Type="Self.Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetRequest">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Assets">
+        <PropertyRef Name="AssetRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__3A81B327">
+    <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="0..1" />
+    <End Role="AssetRequestSpecification" Type="Self.AssetRequestSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetTypeSpecification">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestSpecification">
+        <PropertyRef Name="AssetTypeSpecId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetRequ__Asset__4F7CD00D">
+    <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="0..1" />
+    <End Role="AssetRequestSpecification" Type="Self.AssetRequestSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetTypeSpecification">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetRequestSpecification">
+        <PropertyRef Name="AssetTypeSpecId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetSpec__Asset__3F115E1A">
+    <End Role="Assets" Type="Self.Asset" Multiplicity="0..1" />
+    <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assets">
+        <PropertyRef Name="AssetId" />
+      </Principal>
+      <Dependent Role="AssetSpecification">
+        <PropertyRef Name="AssetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetSpec__Asset__4D5F7D71">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetSpecification">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetSpec__Asset__74794A92">
+    <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="0..1" />
+    <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetTypeSpecification">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetSpecification">
+        <PropertyRef Name="AssetTypeSpecId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetType__Asset__3C69FB99">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetTypeSpecification">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AssetType__Asset__5165187F">
+    <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
+    <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssetType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AssetTypeSpecification">
+        <PropertyRef Name="AssetTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AssetManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AssetAllocations" EntityType="Self.AssetAllocation" />
+    <EntitySet Name="AssetCategories" EntityType="Self.AssetCategory" />
+    <EntitySet Name="AssetDocuments" EntityType="Self.AssetDocument" />
+    <EntitySet Name="AssetLocations" EntityType="Self.AssetLocation" />
+    <EntitySet Name="AssetPaymentModes" EntityType="Self.AssetPaymentMode" />
+    <EntitySet Name="AssetQuotations" EntityType="Self.AssetQuotation" />
+    <EntitySet Name="AssetQuoteApprovals" EntityType="Self.AssetQuoteApproval" />
+    <EntitySet Name="AssetRequests" EntityType="Self.AssetRequest" />
+    <EntitySet Name="AssetRequestPayments" EntityType="Self.AssetRequestPayment" />
+    <EntitySet Name="AssetRequestSpecifications" EntityType="Self.AssetRequestSpecification" />
+    <EntitySet Name="Assets" EntityType="Self.Asset" />
+    <EntitySet Name="AssetSpecifications" EntityType="Self.AssetSpecification" />
+    <EntitySet Name="AssetStatus" EntityType="Self.AssetStatu" />
+    <EntitySet Name="AssetTypes" EntityType="Self.AssetType" />
+    <EntitySet Name="AssetTypeSpecifications" EntityType="Self.AssetTypeSpecification" />
+    <EntitySet Name="AssetVendors" EntityType="Self.AssetVendor" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="AvailableAssets" EntityType="Self.AvailableAsset" />
+    <EntitySet Name="UnallocatedAssets" EntityType="Self.UnallocatedAsset" />
+    <AssociationSet Name="FK__AssetAllo__Asset__44CA3770" Association="Self.FK__AssetAllo__Asset__44CA3770">
+      <End Role="Assets" EntitySet="Assets" />
+      <End Role="AssetAllocation" EntitySet="AssetAllocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetAllo__Emplo__46B27FE2" Association="Self.FK__AssetAllo__Emplo__46B27FE2">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="AssetAllocation" EntitySet="AssetAllocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetAllo__Locat__45BE5BA9" Association="Self.FK__AssetAllo__Locat__45BE5BA9">
+      <End Role="AssetLocation" EntitySet="AssetLocations" />
+      <End Role="AssetAllocation" EntitySet="AssetAllocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetType__Asset__3B75D760" Association="Self.FK__AssetType__Asset__3B75D760">
+      <End Role="AssetCategory" EntitySet="AssetCategories" />
+      <End Role="AssetType" EntitySet="AssetTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetType__Asset__5070F446" Association="Self.FK__AssetType__Asset__5070F446">
+      <End Role="AssetCategory" EntitySet="AssetCategories" />
+      <End Role="AssetType" EntitySet="AssetTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Locat__36B12243" Association="Self.FK__AssetRequ__Locat__36B12243">
+      <End Role="AssetLocation" EntitySet="AssetLocations" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Locat__4BAC3F29" Association="Self.FK__AssetRequ__Locat__4BAC3F29">
+      <End Role="AssetLocation" EntitySet="AssetLocations" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Payme__38996AB5" Association="Self.FK__AssetRequ__Payme__38996AB5">
+      <End Role="AssetPaymentMode" EntitySet="AssetPaymentModes" />
+      <End Role="AssetRequestPayments" EntitySet="AssetRequestPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Payme__4D94879B" Association="Self.FK__AssetRequ__Payme__4D94879B">
+      <End Role="AssetPaymentMode" EntitySet="AssetPaymentModes" />
+      <End Role="AssetRequestPayments" EntitySet="AssetRequestPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetQuot__Asset__571DF1D5" Association="Self.FK__AssetQuot__Asset__571DF1D5">
+      <End Role="AssetVendors" EntitySet="AssetVendors" />
+      <End Role="AssetQuotation" EntitySet="AssetQuotations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetQuot__Asset__66603565" Association="Self.FK__AssetQuot__Asset__66603565">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="AssetQuotation" EntitySet="AssetQuotations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__6A30C649" Association="Self.FK__AssetRequ__Asset__6A30C649">
+      <End Role="AssetQuotation" EntitySet="AssetQuotations" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__34C8D9D1" Association="Self.FK__AssetRequ__Asset__34C8D9D1">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__35BCFE0A" Association="Self.FK__AssetRequ__Asset__35BCFE0A">
+      <End Role="AssetStatus" EntitySet="AssetStatus" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__37A5467C" Association="Self.FK__AssetRequ__Asset__37A5467C">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="AssetRequestPayments" EntitySet="AssetRequestPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__398D8EEE" Association="Self.FK__AssetRequ__Asset__398D8EEE">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__49C3F6B7" Association="Self.FK__AssetRequ__Asset__49C3F6B7">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__4AB81AF0" Association="Self.FK__AssetRequ__Asset__4AB81AF0">
+      <End Role="AssetStatus" EntitySet="AssetStatus" />
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__4CA06362" Association="Self.FK__AssetRequ__Asset__4CA06362">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="AssetRequestPayments" EntitySet="AssetRequestPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__4E88ABD4" Association="Self.FK__AssetRequ__Asset__4E88ABD4">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Assets__AssetReq__3B40CD36" Association="Self.FK__Assets__AssetReq__3B40CD36">
+      <End Role="AssetRequest" EntitySet="AssetRequests" />
+      <End Role="Assets" EntitySet="Assets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__3A81B327" Association="Self.FK__AssetRequ__Asset__3A81B327">
+      <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecifications" />
+      <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetRequ__Asset__4F7CD00D" Association="Self.FK__AssetRequ__Asset__4F7CD00D">
+      <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecifications" />
+      <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetSpec__Asset__3F115E1A" Association="Self.FK__AssetSpec__Asset__3F115E1A">
+      <End Role="Assets" EntitySet="Assets" />
+      <End Role="AssetSpecification" EntitySet="AssetSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetSpec__Asset__4D5F7D71" Association="Self.FK__AssetSpec__Asset__4D5F7D71">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="AssetSpecification" EntitySet="AssetSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetSpec__Asset__74794A92" Association="Self.FK__AssetSpec__Asset__74794A92">
+      <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecifications" />
+      <End Role="AssetSpecification" EntitySet="AssetSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetType__Asset__3C69FB99" Association="Self.FK__AssetType__Asset__3C69FB99">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AssetType__Asset__5165187F" Association="Self.FK__AssetType__Asset__5165187F">
+      <End Role="AssetType" EntitySet="AssetTypes" />
+      <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecifications" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

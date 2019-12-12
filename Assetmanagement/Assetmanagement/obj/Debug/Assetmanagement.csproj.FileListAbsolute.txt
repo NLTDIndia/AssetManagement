@@ -1,0 +1,416 @@
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\Internal_Project\MainProject\Assetmgmt-webAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojResolveAssemblyReference.cache
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AMS_Temp_WebAPI\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ July 25_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+C:\Users\suganyas\Desktop\Assetmgmt-admin _ Aug 2_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 10_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 20_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\Assetmgmt-admin _ Aug 27_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AMS_17_09_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AMS\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AMS Backup\07112018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\From Old Systm\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AssetMgmt_Baseline8_26_Nov_2018\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojResolveAssemblyReference.cache
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll.config
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Assetmanagement.pdb
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.Web.Infrastructure.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Swashbuckle.Core.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Cors.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\WebActivatorEx.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\EntityFramework.SqlServer.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\log4net.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\Newtonsoft.Json.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.Cors.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Net.Http.Formatting.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\bin\System.Web.Http.WebHost.xml
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CoreCompileInputs.cache
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csproj.CopyComplete
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.dll
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.pdb
+D:\AMS\AMS-master\AMS_API\Assetmanagement\Assetmanagement\obj\Debug\Assetmanagement.csprojAssemblyReference.cache
