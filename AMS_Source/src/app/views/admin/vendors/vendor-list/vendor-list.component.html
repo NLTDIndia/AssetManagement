@@ -1,0 +1,65 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Vendors</strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact</th>   
+            <th>Address Line1</th>
+            <th>Area</th>   
+            <th>City</th>                    
+            <th class="editDeleteColumnWidth" style="text-align:center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vend of vendorService.vendorModelList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+            <td>{{vend.Name}}</td>
+            <td>{{vend.MobileNo}}</td>   
+            <td>{{vend.AddressLine1}}</td>
+            <td>{{vend.Area}}</td>
+            <td>{{vend.City}}</td>                  
+            <td class="editDeleteColumn" style="width:15%">
+              <!-- <span class="d-inline-block" data-placement="top" tabindex="0">
+                <a class="btn text-danger" tooltip="Edit" aria-pressed="true" class="btn btn-block btn-info active" (click)="showForEdit(vend)">
+                  <i class="fa fa-pencil-square-o"></i>
+                </a>
+              </span>
+              &nbsp; -->
+              <span class="d-inline-block" data-placement="top" tabindex="0">
+                <a class="btn text-danger" tooltip="Delete" aria-pressed="true" class="btn btn-block btn-danger active" (click)="openModalViewYesorNo(templateYesorNo,vend.Id)">
+                  <i class="fa fa-trash-o"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<ng-template #templateYesorNo>
+  <div class="modal-header" style="background-color:skyblue">
+    <h4 class="modal-title" style="color: #ffffff;">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="decline()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <div class="modal-body text-left">
+      <p class="confirmMsg">
+        <strong>Are you sure you want to delete this Vendor?</strong>
+      </p>
+      <div class="modal-body text-left">
+        <button type="button" class="btn btn-primary confirmBtn" (click)="confirm()">Yes</button>
+        &nbsp;
+        <button type="button" class="btn btn-default confirmBtn" (click)="decline()">No</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

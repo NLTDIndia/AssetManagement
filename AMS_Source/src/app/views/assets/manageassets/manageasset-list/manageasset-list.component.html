@@ -1,0 +1,50 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+    <div class="card">
+      <div class="card-header">
+        <div *ngFor="let at of manageAssetsService.AssetsModelList; let i = index;">
+          <div>
+            <strong *ngIf="i==0">Asset Request #: {{at.AssetRequestNumber}}</strong>
+          </div>
+          <div>
+            <strong *ngIf="i==0">PO Number #: {{at.PONumber}}</strong>
+          </div>
+          <div>
+            <strong *ngIf="i==0">Type: {{at.AssetType}}</strong>
+          </div>
+          <div>
+            <strong *ngIf="i==0">Asset Tagnumber: {{at.TagNumber}}</strong>
+          </div>
+        </div>
+      </div>
+    <div class="card-body" >  
+        <!-- <form class="manage-form" #manageForm="ngForm" (ngSubmit)="onSubmit(manageForm)">      -->
+        <div class="form-group col-md-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text asterisk_input" for="activationDate">Activation Date</label>
+            </div>
+            <input type="text" placeholder="" class="form-control" readonly name="ActivationDate"  ActivationDate="ngModel"      
+           id="dtActivationDate" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-default' }" [(ngModel)]="ActivationDate"          
+           placement="bottom">
+           
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="expiryDate">Expiry Date</label>
+            </div>
+            <input type="text" placeholder="" class="form-control" readonly name="ExpiryDate" ExpiryDate="ngModel"     
+            id="dtExpiryDate" bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-default' }" [(ngModel)]="ExpiryDate"
+            placement="bottom">
+          </div>
+        </div>
+      <!-- </form>           -->
+      </div>
+      <div class="form-group col-md-4">
+        <button type="button" class="btn btn-lg btn-block btn-primary" tooltip="Update" (click)="btnUpdate()">Update</button>
+      </div>
+    </div>
+    </div>

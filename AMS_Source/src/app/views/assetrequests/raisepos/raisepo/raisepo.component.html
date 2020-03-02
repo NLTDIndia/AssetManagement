@@ -1,0 +1,44 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Asset Requests</strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Asset Request Number </th>
+            <th>Asset Type</th>
+            <th>Vendor</th>
+            <th>Approved By</th>
+            <th>Approved On</th>
+            <th class="editDeleteColumn">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let at of _raisePoService.ApprovalQuotationRaisePOList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+            <td style="display:none;">
+              <input type="hidden" value={{at.AssetRequestId}} #ref>
+              <input type="hidden" value={{at.ARNumber}} #ref1>
+            </td>
+            <td>{{at.ARNumber}}</td>
+            <td>{{at.AssetTypeName}}</td>
+            <td>{{at.VendorName}}</td>
+            <td>{{at.EmployeeName}}</td>
+            <td class="number">{{at.ApprovedOn | date:'d/M/yyyy' }}</td>
+            <td class="editDeleteColumn"style="width:15%">
+              <button type="button" class="btn btn-primary" (click)="btnClick(ref.value, ref1.value);">Go</button>
+            </td>
+            <!-- <td style="width:5px;">
+                <button type="button" class="btn btn-primary" (click)="btnClickView(ref.value);">View</button>
+            </td> -->
+          
+          </tr>
+        </tbody>
+      </table>
+
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+  </div>
+</div>

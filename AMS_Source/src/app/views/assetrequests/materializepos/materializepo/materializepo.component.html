@@ -1,0 +1,47 @@
+<div class="animated fadeIn">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Asset Requests</strong>
+        </div>
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+            <th>PO Number</th>
+            <th>Asset Request Number </th>
+            <th>Asset Type</th>
+            <th>Vendor</th>
+            <th>Approved By</th>
+            <th>Approved On</th>
+            <th class="editDeleteColumn">Action</th>      
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let at of materializePOService.MaterializePOList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                <td style="display:none;">
+                    <input type="hidden" value={{at.AssetRequestId}} #ref>
+                    <input type="hidden" value={{at.ARNumber}} #ref1>
+                    <input type="hidden" value={{at.PONumber}} #ref2>
+                    <input type="hidden" value={{at.AssetTypeName}} #ref3>
+                  </td>
+              <td>{{at.PONumber}}</td>
+              <td>{{at.ARNumber}}</td>
+              <td>{{at.AssetTypeName}}</td>
+              <td>{{at.VendorName}}</td>
+              <td>{{at.EmployeeName}}</td>
+              <td class="number">{{at.ApprovedOn | date: 'd/M/yyyy'}}</td>
+              <td class="editDeleteColumn" style="width:12%">
+                  <button type="button" class="btn btn-primary" (click)="btnPaymentsClick(ref.value, ref1.value, ref2.value, ref3.value)">Go</button>               
+              <!-- &nbsp;&nbsp;
+                <button type="button" class="btn btn-primary" (click)="btnViewClick(ref.value);">View</button> -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  
+    </div>
+  
+  </div>

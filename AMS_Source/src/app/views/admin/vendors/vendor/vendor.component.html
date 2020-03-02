@@ -1,0 +1,124 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>Vendor</strong>
+    </div>
+    <div class="card-body">
+      <form class="ven-form" #vendorForm="ngForm" (ngSubmit)="onSubmit(vendorForm)">
+        <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="vendorService.selectedVendor.Id">
+        <input type="hidden" name="CreatedBy" #CreatedBy="ngModel" [(ngModel)]="vendorService.selectedVendor.CreatedBy"> 
+        <input type="hidden" name="LastModifiedBy" #LastModifiedBy="ngModel" [(ngModel)]="vendorService.selectedVendor.LastModifiedBy"> 
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="VendorName">Name</label>
+              </div>
+              <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="vendorService.selectedVendor.Name" placeholder="" required>             
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="VendorContactPerson">Contact Person</label>
+                </div>
+                <input class="form-control" name="ContactPerson" #Name="ngModel" [(ngModel)]="vendorService.selectedVendor.ContactPerson" placeholder="">             
+              </div>
+            </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="VendorAddress1">Address 1</label>
+              </div>
+              <input class="form-control" name="AddressLine1" #AddressLine1="ngModel" [(ngModel)]="vendorService.selectedVendor.AddressLine1"
+                placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="VendorAddress2">Address 2</label>
+              </div>
+              <input class="form-control" name="AddressLine2" #AddressLine2="ngModel" [(ngModel)]="vendorService.selectedVendor.AddressLine2"
+                placeholder="" >
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="AreaName">Area</label>
+              </div>
+              <input class="form-control" name="Area" #Area="ngModel" [(ngModel)]="vendorService.selectedVendor.Area" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="City">City</label>
+              </div>
+              <input class="form-control" name="City" #City="ngModel" [(ngModel)]="vendorService.selectedVendor.City" placeholder="" required>
+            </div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="Pincode">Pincode</label>
+              </div>
+              <input class="form-control" name="Pincode" (keypress)="restrictNumeric($event)" #Pincode="ngModel" [(ngModel)]="vendorService.selectedVendor.Pincode"
+                placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="State">State</label>
+              </div>
+              <input class="form-control" name="State" #State="ngModel" [(ngModel)]="vendorService.selectedVendor.State" placeholder="">
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="MobileNo">Mobile</label>
+              </div>
+              <input class="form-control" name="MobileNo" (keypress)="restrictNumeric($event)" #MobileNo="ngModel" maxlength="10" (keypress)="restrictNumeric($event)"
+                [(ngModel)]="vendorService.selectedVendor.MobileNo" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="Email">Email</label>
+              </div>
+              <input class="form-control" name="Email" #Email="ngModel" type="email" [(ngModel)]="vendorService.selectedVendor.Email"
+                placeholder="">
+            </div>
+          </div>
+
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="LandLineNo">LandLine</label>
+              </div>
+              <input class="form-control" name="LandLineNo" #LandLineNo="ngModel" maxlength="20" (keypress)="restrictNumeric($event)" [(ngModel)]="vendorService.selectedVendor.LandLineNo"
+                placeholder="">
+            </div>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <button [disabled]="!vendorForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+              <i class="fa fa-floppy-o"></i> Submit</button>
+          </div>
+          <div class="form-group col-md-2">
+            <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(vendorForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

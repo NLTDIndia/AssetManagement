@@ -1,0 +1,9 @@
+display the approve icon in flight check page
+=============================================
+Select * from va_bypass_acct where custnum='966000' and jobnum ='000095'
+
+Select * from v_flightchk where custnum='966000' and jobnum ='000095'
+
+--Update v_flightchk set Status ='P',Upload_Status='U' where custnum='966000' and jobnum ='000095'
+--Update va_bypass_acct set Status ='A',Upload_Status='A' where custnum='966000' and jobnum ='000095'
+

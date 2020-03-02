@@ -1,0 +1,58 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <table class="table table-bordered table-striped table-sm" >
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Created By</th>
+            <th style="width:15%;text-align: center;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let at of raiseRequestService.raiseRequestdList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+            <td>{{at.AssetTypeName}}</td>
+            <td>{{at.EmployeeName}}</td>
+            <input type="hidden" value={{at.AssetRequestId}} #ref>
+            <td class="editDeleteColumn">
+              <span class="d-inline-block" data-placement="top" tabindex="0">
+                <a class="btn text-danger" tooltip="Raise Request" aria-pressed="true" class="btn btn-block btn-success active" (click)="sendForRequest(at.AssetRequestId)">
+                  <i class="fa fa-floppy-o"></i>
+                </a>
+              </span>
+              &nbsp;
+              <span class="d-inline-block" data-placement="top" tabindex="0">
+                <a class="btn text-danger" tooltip="Delete Request" aria-pressed="true" class="btn btn-block btn-danger active" (click)="openModalViewYesorNo(templateYesorNo,ref.value)">
+                  <i class="fa fa-trash-o"></i>
+                </a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<ng-template #templateYesorNo>
+  <div class="modal-header" style="background-color:skyblue">
+    <h4 class="modal-title" style="color: #ffffff;">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="decline()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <div class="modal-body text-left">
+      <p class="confirmMsg">
+        <strong>Are you sure you want to delete this asset request?</strong>
+      </p>
+      <div class="modal-body text-left">
+        <button type="button" class="btn btn-primary confirmBtn" (click)="confirm()">Yes</button>
+        &nbsp;
+        <button type="button" class="btn btn-default confirmBtn" (click)="decline()">No</button>
+
+      </div>
+    </div>
+  </div>
+</ng-template>

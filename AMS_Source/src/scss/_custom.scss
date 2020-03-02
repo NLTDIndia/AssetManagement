@@ -1,0 +1,12 @@
+.asterisk_input:after {
+    content:" *"; 
+    color: #e32;
+    font-size: larger; 
+    padding-left: 5px;
+}
+.number{
+    text-align: right;
+}
+.editDeleteColumn{
+    text-align: center;  
+}

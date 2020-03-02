@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MenuList>
+    <MenuItem name="ADMIN" url="/admin" icon="" role="" isMenuItem="true">
+    <children>
+      <MenuItem name="Locations" url="/admin/locations/locations" icon="" role="admin" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Asset Categories" url="/admin/asset-categories/asset-categories" icon="" role="admin" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Asset Types" url="/admin/assettypes/assettypes" icon="" role="admin" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Vendors" url="/admin/vendors/vendors" icon="" role="admin" isMenuItem="true">
+      </MenuItem>
+    </children>
+    </MenuItem>
+    <MenuItem name="ASSET REQUESTS" url="/assestrequests" icon="" role="" isMenuItem="true">
+    <children>
+      <MenuItem name="Track Request" url="/assetrequests/trackrequests/trackrequests" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Raise Request" url="/assetrequests/raiserequests/raiserequests" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Manage Quotation" url="/assetrequests/quotations/quotations" icon="" role="hr,admin" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Add Quotation" url="/assetrequests/quotation-list/quotation-list" icon="" role="hr,admin" isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Manage Quotation" url="/assetrequests/quotations-list/quotations-list" icon="" role="hr,admin" isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Approve Quotation" url="/assetrequests/approvequotations/approvequotations" icon="" role="general manager,hr"
+        isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Approve Quotation List" url="/assetrequests/approvequotation-list/approvequotation-list" icon="" role="hr,general manager"
+        isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Raise PO" url="/assetrequests/raisepos/raisepos" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Payment Details" url="/assetrequests/paymentdetails/paymentdetails" icon="" role="all" isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="View Raise PO Details" url="/assetrequests/viewraisepo/viewraisepo" icon="" role="all" isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Materialize PO" url="/assetrequests/materializepos/materializepos" icon="" role="asset manager" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="View Materialize PO" url="/assetrequests/viewmaterializepo/viewmaterializepo" icon="" role="asset manager"
+        isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Materialize PO Payment Details" url="/assetrequests/mpopaymentdetails/mpopaymentdetails" icon="" role="asset manager"
+        isMenuItem="false">
+      </MenuItem>
+    </children>
+    </MenuItem>
+    <MenuItem name="ASSETS" url="/assets" icon="" role="" isMenuItem="true">
+    <children>
+    <MenuItem name="Create New Asset" url="/assets/createasset/createasset" icon="" role="asset manager" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Manage Assets" url="/assets/manageassets/manageassets" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Manage Assets List" url="/assets/manageassets/manageasset-list/manageasset-list" icon="" role="all" isMenuItem="false">
+      </MenuItem>
+      <MenuItem name="Allocate Assets" url="/assets/assetallocation/assetallocation" icon="" role="asset manager" isMenuItem="true">
+      </MenuItem>
+      <MenuItem name="Revoke Assets" url="/assets/allocatedassets/allocatedassets" icon="" role="asset manager" isMenuItem="true">
+      </MenuItem>
+    </children>
+    </MenuItem>
+    <MenuItem name="REPORTS" url="/report" icon="" role="" isMenuItem="true">
+    <children>
+      <MenuItem name="Pending Assets" url="/report/pendingassets" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+	  <MenuItem name="Unallocated Assets" url="/report/unallocatedassets" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+    </children>
+    </MenuItem>
+    <MenuItem name="USER PROFILE" url="/changepassword" icon="" role="" isMenuItem="true">
+    <children>
+      <MenuItem name="Change Password" url="/changepassword" icon="" role="all" isMenuItem="true">
+      </MenuItem>
+    </children>
+    </MenuItem>
+  </MenuList>
+</Menu>

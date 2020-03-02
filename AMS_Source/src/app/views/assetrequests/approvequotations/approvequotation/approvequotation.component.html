@@ -1,0 +1,42 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Asset Requests </strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Asset Request Number </th>
+            <th>Asset Type</th>
+            <th>Location</th>
+            <th>Requested By</th>
+            <th>Requested On</th>
+            <th class="editDeleteColumn">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let at of approveQuotationService.AssetQuotationList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+            <td style="display:none;">
+              <input type="hidden" value={{at.AssetRequestId}} #ref>
+            </td>
+            <td>{{at.ARNumber}}</td>
+            <td>{{at.AssetTypeName}}</td>
+            <td>{{at.LocationName}}</td>
+            <td>{{at.EmployeeName}}</td>
+            <td  class="number">{{at.CreatedOn | date:'d/M/yyyy'}}</td>
+            <!-- <td style="width:5px;">
+                <button type="button" class="btn btn-primary" (click)="openModalView(templateview,ref.value)">View</button>
+              </td> -->
+            <td class="editDeleteColumn"style="width:15%">
+              <button type="button" class="btn btn-primary" (click)="btnClick(ref.value);">View</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+  </div>
+</div>

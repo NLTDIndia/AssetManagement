@@ -1,0 +1,35 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Unallocated Assets</strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Materialized On</th>
+            <th>Requested By</th>
+            <th>Tag Number</th>
+            <th>Location</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ast of reportService.unallocatedAssetList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+            <td>{{ast.AssetTypeName}}</td>
+            <td>{{ast.RequestedFor}}</td>
+            <td>{{ast.RequestedBy}}</td>
+            <td>{{ast.AssetTagNumber}}</td>
+            <td>{{ast.LocationName}}</td>
+            <td class="editDeleteColumn" style="width:12%">
+              <button type="button" class="btn btn-primary" (click)="btnPaymentsClick(ref.value)">View Spec</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+</div>

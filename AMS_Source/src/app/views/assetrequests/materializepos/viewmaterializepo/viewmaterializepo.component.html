@@ -1,0 +1,295 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+    <div #content class="card">
+      <div class="card-header justify-content-end">
+        <span>
+          <strong>Asset Request #:- </strong>{{_arNumber}}&nbsp;
+          <strong>PO Number #:- </strong>{{_poNumber}}&nbsp;
+          <strong>Asset Type:- </strong>{{_assetTypeName}}&nbsp;
+        </span>
+         
+        <!-- <button class="btn btn-lg btn-block btn-secondary" style="float:right;width:150px">Download PDF</button> -->
+      </div>
+      <div class="card-body">
+        <form class="view-form">
+          <div class="form-row">
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td>Northern Lights Technology Development Pvt Ltd</td>
+               <td colspan="4">
+                  <img src="assets/img/NLTD.png">
+
+                     <!-- <span style="font-size: x-large; color: royalblue">
+                      <strong>Purchase Order</strong>                     -->
+                    <!-- </span> -->
+                  </td>  
+                  <!-- <img src="assets/img/NLTD.png"> -->
+                </tr>
+                <tr>
+                  <td>334, Old Mahabalipuram Road</td>
+                </tr>
+                <tr *ngFor="let vpo of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="i==1">Futura Tech Park Block B, I Floor Sholinganallur,</td>              
+                  <!-- <td *ngIf="i==1" colspan="2">PO Number</td>
+                  <td *ngIf="i==1" colspan="2">{{vpo.PONumber}}</td> -->
+                </tr>
+                <tr>
+                  <td colspan="6">Chennai - 6000119</td>
+                </tr>
+                <tr>
+                  <td colspan="6">Tel: +91 9677044355</td>
+                </tr>
+                <tr>
+                  <td colspan="6">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="background:slateblue">
+                    <span style="font-size: x-large; color: whitesmoke">VENDOR</span>
+                  </td>
+                  <td colspan="4" style="background: slateblue;">
+                    <span style="font-size: x-large;  color: whitesmoke">SHIP TO</span>
+                  </td>
+                </tr>
+
+            </table>
+
+
+            <table style="width: 100%;" *ngFor="let av of raisePoService.viewRaisePOVendorsList; let isEven = even;let i = index;let isLast= last">
+              <tbody>
+                <tr>
+                  <td>{{av.Name}}</td>
+                  <td style="width: 32%"></td>
+
+                  <td>Northern Lights Technology Development Pvt Ltd</td>
+                </tr>
+                <tr>
+                  <td>{{av.AddressLine1}}</td>
+                  <td></td>
+
+                  <td>334, Old Mahabalipuram Road&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>{{av.AddressLine2}}</td>
+                  <td></td>
+
+                  <td>Futura Tech Park Block B, I Floor Sholinganallur,&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>{{av.Area}}</td>
+                  <td></td>
+
+                  <td>Chennai - 6000119&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>{{av.City}}</td>
+                  <td></td>
+
+                  <td>Tel: +91 9677044355&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>{{av.Pincode}}</td>
+                  <td></td>
+
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>{{av.State}}</td>
+                  <td></td>
+
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>Mob: +91 </span>{{av.MobileNo}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>Tel: </span>{{av.LandLineNo}}</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>{{av.FaxNo}}</td>
+                  <td></td>
+
+                  <td></td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+            <table>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+
+            <table class="table table-bordered table-striped table-sm">
+              <tbody>
+                <tr style="background:slateblue">
+                  <td style="color: whitesmoke">
+                    <strong>Item Number</strong>
+                  </td>
+                  <td style="color: whitesmoke">
+                    <strong> Name</strong>
+                  </td>
+                  <td style="color: whitesmoke">
+                    <strong> Specification(s) in detail  </strong>
+                  </td>
+                  <td style="color: whitesmoke">
+                    <strong> Quantity</strong>
+                  </td>
+                  <td style="color: whitesmoke">
+                    <strong> Price(₹)</strong>
+                  </td>                 
+                </tr>
+                <tr *ngFor="let vpo of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="i == 0">{{i + 1}}</td>
+                  <td *ngIf="i == 0">{{vpo.AssetTypeName}}</td>
+                  <td *ngIf="i >= 1"></td>
+                  <td *ngIf="i >= 1"></td>
+                  <td *ngIf="i >= 0">{{vpo.Description}}</td>
+                  <td class="number" *ngIf="i==0">{{vpo.Quantity}}</td>
+                  <td class="number" *ngIf="i==0">{{vpo.Price | number:'0.2'}}                     
+                  </td>                              
+                  <td *ngIf="i >= 1"></td>
+                  <td *ngIf="i >= 1"></td>
+                </tr>               
+                  <tr *ngFor="let pl of raisePoService.ViewRaiseList; let i = index;">
+                      <td *ngIf="i==0"></td>
+                      <td *ngIf="i==0"></td>
+                      <td *ngIf="i==0"></td>
+                      <td class="number" *ngIf="i==0">
+                        <strong>CGST (₹)</strong>
+                      </td>
+                      <td class="number" *ngIf="i==0">{{pl.CGST | number:'0.2'}}</td>
+                    </tr>
+                    <tr *ngFor="let pl of raisePoService.ViewRaiseList; let i = index;">
+                        <td *ngIf="i==0"></td>
+                        <td *ngIf="i==0"></td>
+                        <td *ngIf="i==0"></td>
+                        <td class="number" *ngIf="i==0">
+                          <strong>SGST (₹)</strong>
+                        </td>
+                        <td class="number" *ngIf="i==0">{{pl.SGST| number:'0.2'}}</td>
+                      </tr>
+                <tr *ngFor="let vpt of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="i==0"></td>
+                  <td *ngIf="i==0"></td>
+                  <td *ngIf="i==0"></td>
+                  <td class="number" *ngIf="i==0">
+                    <strong>TOTAL PRICE (₹)</strong>
+                  </td>
+                  <td class="number" *ngIf="i==0">{{vpt.TotalPrice| number:'0.2'}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+            <!-- <ul style="border-radius: 25px;border: 2px solid #73AD21; padding: 20px; width: 250px; height: 150px;" *ngFor="let list of materializePOService.AssetTypePaymentBalanceList;">
+              <li *ngIf="list.Status ==='Full Payment Paid'" >Payment done full</li>
+              <li *ngIf="list.Status ==='Partial Paid'" >Partial Payment done - Rs {{list.BalanceAmount}}/- due</li>
+              <li *ngIf="list.Status ==='No Payment Paid'" >No Payment done - Rs {{list.BalanceAmount}}/- due</li>
+            </ul>
+            </ul> -->
+              <table style="border-radius: 25px;border: 2px solid #73AD21; padding: 20px; width: 280px; height: 50px;" *ngFor="let list of materializePOService.AssetTypePaymentBalanceList;">
+              <h5 style="font-size: 40px; background-color: #F3F5F6; padding: 0 10px;">Payment</h5>
+              <tr *ngIf="list.Status ==='Full Payment Paid'"><strong>Payment done full</strong></tr>
+              <tr *ngIf="list.Status ==='Partial Paid'"><strong>Partial payment done - Rs {{list.BalanceAmount}}/- due</strong></tr>
+              <tr *ngIf="list.Status ==='No Payment Paid'"><strong>No Payment done - Rs {{list.BalanceAmount}}/- due</strong></tr>
+              </table><br/>
+            
+             
+            <!-- <table style="width: 100%;">
+              <tr>
+                <td><strong>COMMENTS OR SPECIAL INSTRUCTIONS:</strong></td>                
+              </tr>
+              <tr *ngFor="let vpt of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="vpt.ChequeNumber"><strong>Cheque Number:</strong> {{vpt.ChequeNumber}}</td>
+              </tr>
+              <tr *ngFor="let vpt of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="vpt.CreditcardNumber"><strong>Credit card Number:</strong> {{vpt.CreditcardNumber}}</td>
+              </tr>
+              <tr *ngFor="let vpt of raisePoService.ViewRaiseList; let i = index;">
+                  <td *ngIf="vpt.TransactionID"><strong>Transaction Identifier:</strong> {{vpt.TransactionID}}</td>
+              </tr>  
+              <tr>
+                &nbsp;
+              </tr>            
+            </table>             -->
+            <!-- <table>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table> -->
+            <table style="width: 100%;"><tr>&nbsp;</tr></table>
+            <table>
+              <tr>
+                <td>
+                  <strong>CONTACT PERSON DETAILS:-</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Attention:</strong>M.V.Suresh Babu</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Contact: </strong>+91 9677044355</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong> Email- </strong>sviswanathan@nltechdev.com</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>For Northern Lights Technology Development (Chennai) Private Limited</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Authorized Signatory</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

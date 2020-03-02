@@ -1,0 +1,43 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Pending Assets</strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>PO Raised On</th>
+            <th>PO Number</th>
+            <th>Asset Type</th>
+            <th>Quantity</th>
+            <th>Vendor Name</th>
+            <th>Mobile</th>
+            <th>Landline</th>
+            <th>Email</th>
+            <th>Price (₹)</th>
+            <th>Location</th>
+            <th>Raised By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ast of reportService.pendingAssetList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+            <td class="number">{{ast.PORaisedOn | date :'d/M/yyyy'}}</td>
+            <td>{{ast.PONumber}}</td>
+            <td>{{ast.AssetType}}</td>
+            <td  class="number">{{ast.Quantity}}</td>
+            <td>{{ast.VendorName}}</td>
+            <td>{{ast.VendorMobileNumber}}</td>
+            <td>{{ast.VendorLandLineNumber}}</td>
+            <td>{{ast.Email}}</td>
+            <td  class="number">{{ast.TotalPrice}}</td>
+            <td>{{ast.OrderedforLocation}}</td>
+            <td>{{ast.RequestRaisedBy}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
+</div>

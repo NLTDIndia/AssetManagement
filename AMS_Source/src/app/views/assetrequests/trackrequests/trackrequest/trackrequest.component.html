@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="card-header">
+    <span>
+      <strong>Track Requests</strong>
+    </span>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr>
+        <td>
+          <label class="container">ARNumber
+            <input name="mode" type="radio" checked value="ARNumber" (change)="setradio('ARNumber', RequestNumber)">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <label class="container">PONumber
+            <input name="mode" type="radio" value="PONUmber" (change)="setradio('PONUmber', RequestNumber)">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <input type="text" class="form-control form-group col-md-12 input-group mb-3" name="RequestedNumber" #RequestNumber />
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <span class="d-inline-block" data-placement="top" tabindex="0">
+            <a class="btn text-danger" tooltip="Search" aria-pressed="true" style="font-size:20px;margin-top:-40px" class="btn btn-block btn-info active"
+              (click)="search(RequestNumber)">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="animated fadeIn">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+        </div>
+
+
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Modified By</th>
+              <th>Modified On</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="trackRequestService.TrackRequestList">
+            <tr *ngIf="trackRequestService.TrackRequestList.length === 0">
+              <td colspan="3" style="text-align:center;font-size: 18px;">No data found.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr *ngFor="let at of trackRequestService.TrackRequestList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+              <td>{{at.Status}}</td>
+              <td>{{at.ModifiedBy}}</td>
+              <td class="number">{{at.ModifiedOn | date:'d/M/yyyy hh:mm a' }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>

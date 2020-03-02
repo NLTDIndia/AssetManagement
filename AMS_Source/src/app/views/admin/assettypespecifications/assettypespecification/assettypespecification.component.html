@@ -1,0 +1,65 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>Asset Type Specification</strong>
+    </div>
+    <div class="card-body">
+      <form class="ats-form" #assetTypeSpecificationForm="ngForm" (ngSubmit)="onSubmit(assetTypeSpecificationForm)">
+        <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="assetTypeSpecificationService.selectedAssetTypeSpecification.Id">
+        <input type="hidden" name="CreatedBy" #CreatedBy="ngModel" [(ngModel)]="assetTypeSpecificationService.selectedAssetTypeSpecification.CreatedBy"> 
+        <input type="hidden" name="LastModifiedBy" #LastModifiedBy="ngModel" [(ngModel)]="assetTypeSpecificationService.selectedAssetTypeSpecification.LastModifiedBy"> 
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label name="AssetTypeSpecification">Asset Type </label>
+            <select class="form-control" (change)="GetAssetSpecificaion()" name="AssetTypeId" [(ngModel)]="assetTypeSpecificationService.selectedAssetTypeSpecification.AssetTypeId">
+              <option value="0">--Select--</option>
+              <option *ngFor="let at of assetTypeSpecificationService.assetTypeList" [ngValue]="at.Id">{{at.Name}}</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label name="Name">Asset Type Specification Name</label>
+            <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="assetTypeSpecificationService.selectedAssetTypeSpecification.Name"
+              placeholder="Name" required>
+            <div class="validation-error" *ngIf="Name.invalid && Name.touched">This Field is Required.</div>
+          </div>
+          <div class="form-group col-md-6" *ngFor="let assettypespec of AssetTypeSpecification;let $index=index;">
+            <label for="ValueType">{{assettypespec.Name}}</label>
+
+            <input *ngIf="assettypespec.ValueType == 'single'" class="form-control" name="ValueType_{{$index}}" #ValueType_{{$index}}="ngModel"
+              [(ngModel)]="assettypespec.Value" placeholder="Value Type" required />
+            <textarea *ngIf="assettypespec.ValueType == 'multiline'" class="form-control" name="ValueType_{{$index}}" #ValueType_{{$index}}="ngModel"
+              [(ngModel)]="assettypespec.Value" placeholder="Value Type" required></textarea>
+            <div class="validation-error">This Field is Required.</div>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <button [disabled]="!assetTypeSpecificationForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+              <i class="fa fa-floppy-o"></i> Submit</button>
+          </div>
+          <div class="form-group col-md-4">
+            <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(assetTypeSpecificationForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
+

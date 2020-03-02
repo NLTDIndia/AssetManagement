@@ -1,0 +1,101 @@
+<div class="card">
+  <div class="card-header">
+    <span>
+      <strong>Manage Assets</strong>
+    </span>
+  </div>
+  <div class="card-body">
+    <table>
+      <tr>
+        <td>
+          <label class="container">ARNumber
+            <input name="mode" type="radio" checked value="ARNumber" (change)="setradio('ARNumber', RequestNumber)">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <label class="container">PONumber
+            <input name="mode" type="radio" value="PONUmber" (change)="setradio('PONUmber', RequestNumber)">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <label class="container">Others
+            <input name="mode" type="radio" value="others" (change)="setradio('others', RequestNumber)">
+            <span class="checkmark"></span>
+          </label>
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <input type="text" class="form-control form-group col-md-12 input-group mb-3" name="RequestedNumber" #RequestNumber />
+        </td>
+        <td> &nbsp;&nbsp;</td>
+        <td> &nbsp;&nbsp;</td>
+        <td>
+          <span class="d-inline-block" data-placement="top" tabindex="0">
+            <a class="btn text-danger" tooltip="Search" aria-pressed="true" style="font-size:20px;margin-top:-40px" class="btn btn-block btn-info active"
+              (click)="search(RequestNumber)">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+      </div>
+      <table>
+
+      </table>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Asset Type</th>
+            <th>Tag number</th>
+            <th>Asset Identifier</th>
+            <th>Activation Date</th>
+            <th>Expiry Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="manageAssetsService.AssetsModelList">
+          <tr *ngIf="manageAssetsService.AssetsModelList.length === 0">
+            <td colspan="6" style="text-align:center;font-size: 18px;">No data found.</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr *ngFor="let at of manageAssetsService.AssetsModelList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+            <td style="display:none;">
+              <input type="hidden" value={{at.AssetId}} #ref>
+            </td>
+            <td style="display:none;">
+              <input type="hidden" value={{at.ActivationDate}} #ref1>
+            </td>
+            <td style="display:none;">
+              <input type="hidden" value={{at.ExpiryDate}} #ref2>
+            </td>
+            <td>{{at.AssetType}}</td>
+            <td>{{at.TagNumber}}</td>
+            <td>{{at.AssetIdentifier}}</td>
+            <td class="number">{{at.ActivationDate | date :'d/M/yyyy'}}</td>
+            <td class="number">{{at.ExpiryDate | date :'d/M/yyyy'}}</td>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="btnEdit(ref.value,ref1.value,ref2.value)">Edit</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

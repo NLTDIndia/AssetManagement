@@ -1,0 +1,91 @@
+<div class="animated fadeIn">
+    <div class="col-md-12">
+        <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+  <div class="card">
+    <div class="card-header">
+      <strong>Add Quotation - Asset Request #: <label id="assetRequestId">{{_assetRequestNumber}}</label></strong>
+    </div>    
+    <div class="card-body">
+      <form class="at-form" #addQuotationForm="ngForm" (ngSubmit)="onSubmit(addQuotationForm,fileEvent)">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="newAttributeName">Vendor</label>
+              </div>
+              <select class="form-control" id="newAttributeName" name="newAttributeName" [(ngModel)]="newAttribute.AssetVendorId"
+              (change)="setSelectedVendor($event)" required>
+                <option value="0">--Select--</option>
+                <option *ngFor="let ac of quotationService.VendorList" [ngValue]="ac.Id">{{ac.Name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+              <label class="input-group-text asterisk_input" for="newAttributePrice">Price (₹)</label>
+            </div>
+              <input class="form-control" type="text" id="newAttributePrice" #Price="ngModel" (keypress)="restrictNumeric($event)" [(ngModel)]="newAttribute.price"
+              name="newAttributePrice" required />
+              <div class="validation-error" *ngIf="Price.invalid && Price.touched"></div>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text asterisk_input" for="newAttributeQty">Quantity</label>
+                </div>
+                <input class="form-control" type="text" id="newAttributeQty" #Quantity="ngModel" (keypress)="restrictNumeric($event)" [(ngModel)]="newAttribute.qty"
+                name="newAttributeQty" required />
+                <div class="validation-error" *ngIf="Quantity.invalid && Quantity.touched"></div>
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="newAttributeCGST">CGST (₹)</label>
+                </div>
+                <input class="form-control" type="text" id="newAttributeCGST" (keypress)="restrictNumeric($event)" [(ngModel)]="newAttribute.cgst" name="newAttributeCGST" />
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="newAttributeSGST">SGST (₹)</label>
+                </div>
+                <input class="form-control" type="text" id="newAttributeSGST" (keypress)="restrictNumeric($event)" [(ngModel)]="newAttribute.sgst" name="newAttributeSGST" />
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text" for="newAttributeDocuments">Document(s)</label>
+                  </div>
+                  <input class="form-control" [(ngModel)]="newAttribute.documents" id="newAttributeDocuments" type="file" multiple #fileEvent>
+              </div>
+          </div>
+          <div class="form-group col-md-8">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="newAttributeComments">Comments</label>
+                </div>
+                <textarea class="form-control" type="text" aria-multiline="true" cols="40" rows="4" id="newAttributeComments" [(ngModel)]="newAttribute.comments" name="newAttributeComments"></textarea>
+              </div>
+          </div>
+      
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+              <button [disabled]="!addQuotationForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+                <i class="fa fa-floppy-o"></i> Add</button>
+            </div>
+            <div class="form-group col-md-2">
+              <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(fileEvent)">
+                <i class="fa fa-repeat"></i> Reset</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

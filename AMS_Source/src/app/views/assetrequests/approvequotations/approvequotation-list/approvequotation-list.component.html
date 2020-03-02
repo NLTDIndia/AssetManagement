@@ -1,0 +1,107 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+    <div class="card">
+      <div class="card-header justify-content-end">
+          <table *ngFor="let at of approveQuotationService.ApproveAssetQuotationList; let i = index;">
+              <tr>
+                <td >
+                  <strong *ngIf="i==0">Asset Request #: {{at.ARNumber}}</strong>
+                </td>
+                </tr>
+                <tr>            
+                <td><strong *ngIf="i==0">Type: {{at.AssetTypeName}}</strong></td>           
+              </tr>
+              <tr>
+                  <td><strong *ngIf="i==0"> Requested By: {{at.EmployeeName}}</strong></td>           
+                </tr>
+                <tr>
+                    <td><strong *ngIf="i==0"> Requested On: {{at.CreatedOn| date:'d/M/yyyy'}}</strong></td>           
+                  </tr>
+            </table>
+        <!-- <table>
+          <tr>
+            <td *ngFor="let at of approveQuotationService.ApproveAssetQuotationList; let i = index;">
+              <strong *ngIf="i==1">Asset Request #: {{at.ARNumber}}</strong>
+            </td>
+          </tr>
+        </table> -->
+      </div>
+      <div class="card-body">
+        <accordion>
+          <accordion-group *ngFor="let ats of approveQuotationService.ApproveAssetQuotationList; let i = index;" [heading]="ats.VendorName">
+            <table class="table table-sm table-bordered" *ngFor="let arc of approveQuotationService.ApproveQuotationApprovalCommentsList; let j = index;">
+              <thead>
+                <tr>
+                  <th>Approved By</th>
+                  <th>Approved On</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{arc.ApprovedBy}}</td>
+                  <td>{{arc.ApprovedOn | date:'d/M/yyyy' }}</td>
+                  <td>{{arc.QuotationApproveComments }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-bordered table-striped table-sm">
+              <tbody>
+                <tr>
+                  <td style="display:none;">
+                    <input type="hidden" value={{ats.AssetQuotationId}} #ref>
+                  </td>
+                  <td style="display:none;">
+                    <input type="hidden" value={{ats.AssetRequestId}} #ref1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Vendor</td>
+                  <td>{{ats.VendorName}}</td>
+                </tr>
+                <tr>
+                  <td>Price(₹)</td>
+                  <td>{{ats.Price | number:'0.2'}}</td>
+                </tr>
+                <tr>
+                  <td>Quantity</td>
+                  <td>{{ats.Quantity}}</td>
+                </tr>
+                <tr>
+                  <td>CGST(₹)</td>
+                  <td>{{ats.CGST | number:'0.2'}}</td>
+                </tr>
+                <tr>
+                  <td>SGST(₹)</td>
+                  <td>{{ats.SGST | number:'0.2'}}</td>
+                </tr>
+                <tr>
+                  <td>Comments</td>
+                  <td>{{ats.Comments}}</td>
+                </tr>
+                <tr>
+                  <td>Document(s)</td>
+                  <td>
+                    <input class="form-control" type="file" multiple #fileEvent>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <button type="button" class="btn btn-primary" (click)="btnApprovalClick(ref.value, ref1.value, fileEvent);">Approve</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-primary" (click)="btnSendAnotherApprovalClick(ref.value, ref1.value, fileEvent);">Send for Another Approval</button>
+                  </td>
+                  <!-- <td style="width:5px;">
+                  <button type="button" class="btn btn-primary" (click)="openModalView(templateview,ref.value)">Open Modal</button>
+                </td> -->
+                </tr>
+              </tbody>
+            </table>
+          </accordion-group>
+        </accordion>
+      </div>
+    </div>
+  </div>
+</div>

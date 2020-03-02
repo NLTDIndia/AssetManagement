@@ -1,0 +1,392 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+    <div class="card">
+      <div class="card-header justify-content-end">
+        <span>
+          <strong>Asset Request #:- </strong>{{_arNumber}}&nbsp;
+          <strong>PO Number #:- </strong>{{_poNumber}}&nbsp;
+          <strong>Asset Type:- </strong>{{_assetTypeName}}&nbsp;
+        </span>
+        <table style="float: right">
+          <tr>
+            <td>
+              <button type="button" class="btn btn-primary" (click)="btnClickView();">
+                <i class="fa fa-eye"></i> View PO</button>
+            </td>
+            <td>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-floppy-o"></i> Convert to Assest</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="card-body">
+          <table style="width:100%">
+              <tr>
+                <td>
+                  <label name="Name">
+                    <strong>Payment History</strong>
+                  </label>
+                </td>
+              </tr>
+            </table>
+          <div class="form-row">
+              <div class="form-group col-md-12">
+                <table class="table table-bordered table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th>Payment Mode</th>
+                      <th>Base Amount(₹)</th>
+                      <th>Tax(₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let pl of materializePOService.paymentsList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                      <input type="hidden" value={{pl.PaymentId}} #ref>
+                      <td>{{pl.PaymentMode}}</td>
+                      <td class="number">{{pl.BaseAmount| number:'0.2'}}</td>
+                      <td class="number">{{pl.Tax| number:'0.2'}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+            </div>
+        <table style="width:100%">
+          <tr>
+            <td>
+              <label name="Name">
+                <strong>Manage Payments</strong>
+              </label>
+            </td>
+            <td style="text-align:right">
+              <button type="button" class="btn btn-primary" (click)="toggleDivshow()">
+                Add New Payment</button>
+            </td>
+          </tr>
+        </table>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <table class="table table-bordered table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Payment Mode</th>
+                  <th>Base Amount(₹)</th>
+                  <th>Tax(₹)</th>
+                  <th class="editDeleteColumn">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pl of materializePOService.paymentsCurrentList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+                  <input type="hidden" value={{pl.PaymentId}} #ref>
+                  <td>{{pl.PaymentMode}}</td>
+                  <td class="number">{{pl.BaseAmount| number:'0.2'}}</td>
+                  <td class="number">{{pl.Tax| number:'0.2'}}</td>
+                  <td style="text-align: center">
+                    <span class="d-inline-block" data-placement="top" tabindex="0">
+                      <a class="btn text-danger" tooltip="Delete Payment" aria-pressed="true" class="btn btn-block btn-danger active" (click)="openModalViewYesorNo(templateYesorNo, pl.PaymentId)">
+                        <i class="fa fa-trash-o"></i>
+                      </a>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 " *ngIf="show_DivShow">
+        <form class="model-form" #ModelPaymentrequestForm="ngForm" (ngSubmit)="onPaymentSubmit(ModelPaymentrequestForm)">
+          <div class="card">
+            <div class="card-header">
+              <span>
+                <strong>Payment Details</strong>
+              </span>
+            </div>
+            <div class="card-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <label class="container">Cheque
+                      <input name="options" name="Cheque_{{$index14}}" #Cheque_{{$index14}}="ngModel" [(ngModel)]="Cheque_" type="radio" [value]="false"
+                        id="Cheque" (click)="toggleCheque()" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="container">Credit Card
+                      <input name="options" name="CreditCard_{{$index15}}" #CreditCard_{{$index15}}="ngModel" [(ngModel)]="CreditCard_" type="radio"
+                        [value]="false" id="CreditCard" (click)="toggleCC()" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="container">Direct Transfer
+                      <input name="options" name="DT_{{$index16}}" #DT_{{$index16}}="ngModel" [(ngModel)]="DT_" type="radio" [value]="false" id="DT"
+                        (click)="toggleDT()" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+              </table>
+              <ng-container *ngIf="show_Cheque">
+                <div style="margin: 10px;text-align: left;" class="form-row">
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="ChequeNo">Cheque Number</label>
+                      </div>
+                      <input class="form-control" name="ChequeNo_{{$index}}" (keypress)="restrictNumeric($event)" #ChequeNo_{{$index}}="ngModel"
+                        [(ngModel)]="ChequeNo" placeholder="" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="chequeDate">Cheque Date</label>
+                      </div>
+                      <input type="text" placeholder="" readonly name="ChequeDate_{{$index2}}" #ChequeDate_{{$index2}}="ngModel" class="form-control"
+                        bsDatepicker [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-default' }" [(ngModel)]="ChequeDate"
+                        placement="bottom" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Bankname">Bank Name</label>
+                      </div>
+                      <input class="form-control" name="ChequeBankName_{{$index4}}" #ChequeBankName_{{$index4}}="ngModel" [(ngModel)]="ChequeBankName"
+                        placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="BranchName">Branch</label>
+                      </div>
+                      <input class="form-control" name="ChequeBranch_{{$index5}}" #ChequeBranch_{{$index5}}="ngModel" [(ngModel)]="ChequeBranch"
+                        placeholder="" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Payee">Payee</label>
+                      </div>
+                      <input class="form-control" name="Payee_{{$index25}}" #Payee_{{$index25}}="ngModel" [(ngModel)]="Payee" placeholder="" />
+                    </div>
+                  </div>           
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="BaseAmount">BaseAmount</label>
+                      </div>
+                      <input class="form-control" name="BaseAmount_{{$index10}}" (keypress)="restrictNumeric($event)" #BaseAmount_{{$index10}}="ngModel"
+                        [(ngModel)]="BaseAmount" placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Tax">Tax</label>
+                      </div>
+                      <input class="form-control" name="Tax_{{$index11}}" #Tax_{{$index11}}="ngModel" (keypress)="restrictNumeric($event)" [(ngModel)]="Tax"
+                        placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Payee">Amount</label>
+                      </div>
+                      <input class="form-control" name="ChequeAmount_{{$index3}}" (keypress)="restrictNumeric($event)" #ChequeAmount_{{$index3}}="ngModel"
+                        [(ngModel)]="ChequeAmount" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="show_Credit_Card">
+                <div style="margin: 10px;text-align: left;" class="form-row">
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="ccname">Name</label>
+                      </div>
+                      <input class="form-control" name="CCName_{{$index7}}" #CCName_{{$index7}}="ngModel" [(ngModel)]="CCName" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="cnum">Card number</label>
+                      </div>
+                      <input type="text" class="form-control" name="CCNo_{{$index6}}" #CCNo_{{$index6}}="ngModel" [(ngModel)]="CCNo" maxlength="4"
+                        (keypress)="restrictNumeric($event)" placeholder="Last four digits">
+                      <div class="input-group-append">
+                        <span class="input-group-text text-muted">
+                          <i class="fa fa-cc-visa"></i> &nbsp;
+                          <i class="fa fa-cc-amex"></i> &nbsp;
+                          <i class="fa fa-cc-mastercard"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="BaseAmount">BaseAmount</label>
+                      </div>
+                      <input class="form-control" name="BaseAmount_{{$index10}}" (keypress)="restrictNumeric($event)" #BaseAmount_{{$index10}}="ngModel"
+                        [(ngModel)]="BaseAmount" placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Tax">Tax</label>
+                      </div>
+                      <input class="form-control" name="Tax_{{$index11}}" #Tax_{{$index11}}="ngModel" (keypress)="restrictNumeric($event)" [(ngModel)]="Tax"
+                        placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="cAmount">Amount</label>
+                      </div>
+                      <input class="form-control" name="CCAmount_{{$index16}}" (keypress)="restrictNumeric($event)" #CCAmount_{{$index16}}="ngModel"
+                        [(ngModel)]="CCAmount" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="show_DC">
+                <div style="margin: 10px;text-align: left;" class="form-row">
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="dti">Transaction Identifier</label>
+                      </div>
+                      <input class="form-control" name="DC_TransactionIdentifier_{{$index8}}" #DC_TransactionIdentifier_{{$index8}}="ngModel" [(ngModel)]="DCNO"
+                        placeholder="" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="dti">Transferee</label>
+                      </div>
+                      <input class="form-control" name="DC_Transferer_{{$index9}}" #DC_Transfer_{{$index9}}="ngModel" [(ngModel)]="DCTransfer"
+                        placeholder="" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="BaseAmount">BaseAmount</label>
+                      </div>
+                      <input class="form-control" name="BaseAmount_{{$index10}}" (keypress)="restrictNumeric($event)" #BaseAmount_{{$index10}}="ngModel"
+                        [(ngModel)]="BaseAmount" placeholder="" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="Tax">Tax</label>
+                      </div>
+                      <input class="form-control" name="Tax_{{$index11}}" #Tax_{{$index11}}="ngModel" (keypress)="restrictNumeric($event)" [(ngModel)]="Tax"
+                        placeholder="" />
+                    </div>
+                  </div>
+      
+                  <div class="form-group col-md-4">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text asterisk_input" for="dti">Amount</label>
+                      </div>
+                      <input class="form-control" name="DCAmount_{{$index17}}" (keypress)="restrictNumeric($event)" #DCAmount_{{$index17}}="ngModel"
+                        [(ngModel)]="DCAmount" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </ng-container>
+      
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <button type="submit" class="btn btn-lg btn-block btn-info">
+                    Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <span>
+              <strong>Other Specification</strong>
+            </span>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <tr></tr>
+            </table>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <div class="input-group mb-3">
+                  <table>
+                  <tr *ngFor="let list of materializePOService.OtherAssetTypeSpecificationList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index" >
+                    <td>{{list.AssetTypeOtherSpecification}}</td>
+                  </tr>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<ng-template #templateYesorNo>
+  <div class="modal-header" style="background-color:skyblue">
+    <h4 class="modal-title" style="color: #ffffff;">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="decline()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <div class="modal-body text-left">
+      <p class="confirmMsg">
+        <strong>Are you sure you want to delete this payment?</strong>
+      </p>
+      <div class="modal-body text-left">
+        <button type="button" class="btn btn-primary confirmBtn" (click)="confirm()">Yes</button>
+        &nbsp;
+        <button type="button" class="btn btn-default confirmBtn" (click)="decline()">No</button>
+
+      </div>
+    </div>
+  </div>
+</ng-template>

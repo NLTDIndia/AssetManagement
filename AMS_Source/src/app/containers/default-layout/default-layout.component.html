@@ -1,0 +1,41 @@
+<app-header [fixed]="true" [navbarBrandFull]="{ }" [navbarBrandMinimized]="{src: 'assets/img/logo.png', width: 50, height: 30, alt: 'AMS'}"
+  [sidebarToggler]="'lg'" [asideMenuToggler]="'lg'">
+  <div  class="title">NORTHERN LIGHTS AMS</div>
+  <div class="logout">
+      <i class="icon-user"></i> {{this.firstName}} {{this.lastName}}
+       | <a href="#" (click)="logout()" class="logout"><i class="icon-logout"></i> Logout</a>
+  </div>
+</app-header>
+<div class="app-body">
+  <app-sidebar [fixed]="true" [display]="'lg'">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
+    <!--Modify <app-sidebar-minimizer></app-sidebar-minimizer> Modify-->
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+      <app-breadcrumb></app-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <!-- Modify <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+        </div>
+      </li> Modify -->
+    </ol>
+    <div class="container-fluid">
+      <router-outlet (activate)='onActivate()'></router-outlet>
+    </div>
+    <!-- /.container-fluid -->
+  </main>
+
+</div>
+<app-footer>
+  <span style="color: black">    
+    <b>Copyright &copy; 2018</b>&nbsp;
+    <a class="ml-auto" href="http://www.nltd.com/">
+      <b>NLTD India.</b>&nbsp;
+    </a>All rights reserved.</span>  
+  <span class="ml-auto">Asset Management System
+  </span>
+</app-footer>

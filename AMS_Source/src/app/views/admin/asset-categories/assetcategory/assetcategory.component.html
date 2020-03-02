@@ -1,0 +1,35 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>Asset Category</strong>
+    </div>
+    <div class="card-body">
+      <form class="ac-form" #assetCategoryForm="ngForm" (ngSubmit)="onSubmit(assetCategoryForm)">
+        <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="assetCategoryService.selectedAssetCategory.Id">
+        <input type="hidden" name="CreatedBy" #CreatedBy="ngModel" [(ngModel)]="assetCategoryService.selectedAssetCategory.CreatedBy"> 
+        <input type="hidden" name="LastModifiedBy" #LastModifiedBy="ngModel" [(ngModel)]="assetCategoryService.selectedAssetCategory.LastModifiedBy"> 
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="categoryName">Asset Category Name</label>
+              </div>
+              <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="assetCategoryService.selectedAssetCategory.Name" placeholder=""
+                required>             
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <button [disabled]="!assetCategoryForm.valid" type="submit" class="btn btn-lg btn-block btn-info">
+              <i class="fa fa-floppy-o"></i> Submit</button>
+          </div>
+          <div class="form-group col-md-2">
+            <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(assetCategoryForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

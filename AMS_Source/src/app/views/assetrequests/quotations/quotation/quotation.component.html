@@ -1,0 +1,48 @@
+<div class="animated fadeIn">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Asset Requests</strong>
+      </div>
+      <table class="table table-bordered table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Asset Request Number </th>
+            <th>Asset Type </th>
+            <th>Location</th>
+            <th>Quantity</th>
+            <th>Requested By</th>
+            <th>Requested On</th>
+            <th># of Quotations</th>
+            <th class="editDeleteColumn">Actions</th>
+            <!-- <th></th>
+            <th></th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let at of quotationService.QuotationList | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+            <td style="display:none;">
+              <input type="hidden" value={{at.AssetRequestId}} #ref>
+              <input type="hidden" value={{at.ARNumber}} #ref1>
+            </td>
+            <td>{{at.ARNumber}}</td>
+            <td>{{at.AssetTypeName}}</td>
+            <td>{{at.LocationName}}</td>
+            <td  class="number">{{at.Quantity}}</td>
+            <td>{{at.EmployeeName}}</td>
+            <td  class="number">{{at.CreatedOn | date:'d/M/yyyy'}}</td>
+            <td  class="number">{{at.QuotationCount}}</td>
+            <td class="editDeleteColumn" style="width:30%">          
+              <button type="button" class="btn btn-primary" (click)="btnClickAdd(ref.value, ref1.value)">Add</button>&nbsp;&nbsp;
+              <button [disabled]="!validate" *ngIf="at.QuotationCount==0" type="button" class="btn btnDisable" (click)="openModalView(ref.value)">Manage</button>
+              <button *ngIf="at.QuotationCount!==0" type="button" class="btn btn-primary" (click)="openModalView(ref.value)">Manage</button>&nbsp;&nbsp;
+              <button [disabled]="!validate" *ngIf="at.QuotationCount==0" type="button" class="btn btnDisable" (click)="SendForApproval(ref.value)">Send For Approval</button>
+              <button *ngIf="at.QuotationCount!==0" type="button" class="btn btn-primary" (click)="SendForApproval(ref.value)">Send For Approval</button>
+            </td>           
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

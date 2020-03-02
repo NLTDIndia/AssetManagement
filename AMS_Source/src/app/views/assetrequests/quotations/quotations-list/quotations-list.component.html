@@ -1,0 +1,113 @@
+<div class="animated fadeIn">
+
+  <div class="col-md-12">
+    <input type="button" class="btn btn-primary" (click)="onBackButtonClick()" value="Back to List" />
+    <div class="card">
+      <div class="card-header justify-content-end">
+        <table *ngFor="let at of quotationService.AssetQuotationList; let i = index;">
+          <tr>
+            <td >
+              <strong *ngIf="i==0">Asset Request #: {{at.ARNumber}}</strong>
+            </td>
+            </tr>
+            <tr>            
+            <td><strong *ngIf="i==0">Type: {{at.AssetTypeName}}</strong></td>           
+          </tr>
+          <tr>
+              <td><strong *ngIf="i==0"> Requested By: {{at.EmployeeName}}</strong></td>           
+            </tr>
+            <tr>
+                <td><strong *ngIf="i==0"> Requested On: {{at.CreatedOn| date:'d/M/yyyy'}}</strong></td>           
+              </tr>
+        </table>
+        <table style="float: right;">
+          <tr>
+              <td>
+                  <button type="button" class="btn btn-primary"  (click)="SendForApproval()">Send For Approval</button>
+                </td>
+          </tr>
+        </table>       
+        
+      </div>     
+      <accordion>
+        <accordion-group *ngFor="let ats of quotationService.AssetQuotationList;  let i = index;" [heading]="ats.VendorName">
+          
+          <table style="float: right;">
+            <tr>
+              <!-- <td>
+                <span class="d-inline-block" data-placement="top" tabindex="0">
+                  <a class="btn text-danger" tooltip="Edit Quotation" aria-pressed="true" class="btn btn-block btn-info active" (click)="showForEdit(ats)">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </a>
+                </span>
+              </td>  &nbsp;-->
+              <td>
+                <span class="d-inline-block" data-placement="top" tabindex="0">
+                  <a class="btn text-danger" tooltip="Delete Quotation" aria-pressed="true" class="btn btn-block btn-danger active" (click)="openModalViewYesorNo(templateYesorNo,ats.AssetQuotationId)">
+                    <i class="fa fa-trash-o"></i>
+                  </a>
+                </span>
+              </td> &nbsp;
+            </tr>
+          </table>
+          <table class="table table-bordered table-striped table-sm">
+            <tbody>
+              <tr>
+                <td style="display:none;">
+                  <input type="hidden" value={{ats.AssetQuotationId}} #ref>
+                  <input type="hidden" value={{ats.AssetRequestId}} #ref1>
+                </td>
+               
+              </tr>
+              <tr>
+                <td>Vendor</td>
+                <td>{{ats.VendorName}} </td>
+              </tr>
+              <tr>
+                <td>Price(₹)</td>
+                <td>{{ats.Price | number:'0.2'}}</td>
+              </tr>
+              <tr>
+                <td>CGST(₹)</td>
+                <td>{{ats.CGST | number:'0.2'}}</td>                
+              </tr>
+              <tr>
+                <td>SGST(₹)</td>
+                <td>{{ats.SGST | number:'0.2'}}</td>
+              </tr>
+              <!-- <tr>
+                <td>Document(s): </td>
+                <td>{{ats.Documents}}</td>
+              </tr>              -->
+              <tr>
+                <td>Comments:</td>
+                <td>{{ats.Comments}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>
+<ng-template #templateYesorNo>
+  <div class="modal-header" style="background-color:skyblue">
+    <h4 class="modal-title" style="color: #ffffff;">Confirmation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="decline()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <div class="modal-body text-left">
+      <p class="confirmMsg">
+        <strong>Are you sure you want to delete this asset quotation?</strong>
+      </p>
+      <div class="modal-body text-left">
+        <button type="button" class="btn btn-primary confirmBtn" (click)="confirm()">Yes</button>
+        &nbsp;
+        <button type="button" class="btn btn-default confirmBtn" (click)="decline()">No</button>
+
+      </div>
+    </div>
+  </div>
+</ng-template>

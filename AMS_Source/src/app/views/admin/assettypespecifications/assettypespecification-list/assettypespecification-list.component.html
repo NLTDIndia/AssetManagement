@@ -1,0 +1,35 @@
+<div class="animated fadeIn">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>Asset Type Specification List</strong>
+        </div>
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Asset Type </th>
+              <th>Asset Type Specification</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ats of assetTypeSpecificationService.assetTypeSpecificationList | paginate: { itemsPerPage: 2, currentPage: p }; let i = index">
+              <td>{{ats.AssetTypeName}}</td>
+              <td>{{ats.Name}}</td>
+              <td>
+                <a class="btn" (click)="showForEdit(at)">
+                  <i class="fa fa-pencil-square-o"></i>
+                </a>
+                <a class="btn text-danger" (click)="onDelete(ats.Id)">
+                  <i class="fa fa-trash-o"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+  
+  

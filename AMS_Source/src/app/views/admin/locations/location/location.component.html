@@ -1,0 +1,45 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-header">
+      <strong>Location</strong>
+    </div>
+    <div class="card-body">
+      <form class="loc-form" #locationForm="ngForm" (ngSubmit)="onSubmit(locationForm)">
+        <input type="hidden" name="Id" #Id="ngModel" [(ngModel)]="locationService.selectedLocation.Id">
+        <input type="hidden" name="CreatedBy" #CreatedBy="ngModel" [(ngModel)]="locationService.selectedLocation.CreatedBy"> 
+        <input type="hidden" name="LastModifiedBy" #LastModifiedBy="ngModel" [(ngModel)]="locationService.selectedLocation.LastModifiedBy"> 
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="locationName">Name</label>
+              </div>
+              <input class="form-control" name="Name" #Name="ngModel" [(ngModel)]="locationService.selectedLocation.Name" placeholder=""
+                required>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text asterisk_input" for="locationAddress">Address</label>
+              </div>
+              <input class="form-control" name="Address" #Address="ngModel" [(ngModel)]="locationService.selectedLocation.Address" placeholder=""
+                required>
+
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <button [disabled]="!locationForm.valid" type="submit" tooltip="Save" class="btn btn-lg btn-block btn-info">
+              <i class="fa fa-floppy-o"></i> Submit</button>
+          </div>
+          <div class="form-group col-md-2">
+            <button type="button" class="btn btn-lg btn-block btn-secondary" tooltip="Reset" (click)="resetForm(locationForm)">
+              <i class="fa fa-repeat"></i> Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
