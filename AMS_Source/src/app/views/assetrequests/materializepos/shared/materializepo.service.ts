@@ -75,6 +75,10 @@ export class MaterializePOService {
         var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });
         return this.http.post(this._global.baseAppUrl + '/InsertPaymentDetails', body, requestOptions).map(x => x.json());
     }
+
+    
+       
+    
     DeletePaymentsById(id, loginId) {
         var LastModifiedBy = loginId;
         return this.http.delete(this._global.baseAppUrl + '/DeletePaymentsById?id=' + id + '&lastModifiedBy='+LastModifiedBy).map(res => res.json());
@@ -97,5 +101,11 @@ export class MaterializePOService {
         }).toPromise().then(x => { this.AssetTypePaymentBalanceList = x; console.log(this.AssetTypePaymentBalanceList)} 
         
         )
+    }
+    PostConvertToAsset(AssetRequestId) {
+       
+        var headerOptions = new Headers({ 'Content-Type': 'application/json' });
+        var requestOptions = new RequestOptions({ method: RequestMethod.Post, headers: headerOptions });       
+        return this.http.post(this._global.baseAppUrl + '/PostMaterializePo?AssetRequestId=' + AssetRequestId, requestOptions).map(res => res.json());
     }
 }
