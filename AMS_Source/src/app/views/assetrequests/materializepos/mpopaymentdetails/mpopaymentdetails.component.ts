@@ -319,6 +319,11 @@ export class MpopaymentdetailsComponent implements OnInit {
     //   })
   }
 
+  ConvertToAsset(){
+    this.materializePOService.PostConvertToAsset(this._assetRequestId);
+
+  }
+  
   btnClickView = function () {
     this._router.navigate(['/assetrequests/viewmaterializepo/viewmaterializepo'], { queryParams: { AssetRequestId: this._navigateAssetRequestId, ARNumber: this._arNumber, PONumber: this._poNumber, AssetTypeName: this._assetTypeName } });
   };
