@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
-
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
-import { ChangepasswordComponent } from './views/changepassword/changepassword.component';
-import { RegisterComponent } from './views/register/register.component';
 
 export const routes: Routes = [
   {
@@ -31,20 +26,6 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
-  },
-  {
     path: '',
     component: DefaultLayoutComponent,
     data: {
@@ -62,14 +43,7 @@ export const routes: Routes = [
       {
         path: 'assets',
         loadChildren: './views/assets/assets.module#AssetsModule'
-      },   
-      {
-        path: 'changepassword',
-        component: ChangepasswordComponent,
-        data: {
-          title: 'Change Password'
-        }
-      }, 
+      },        
       {
         path: 'report',
         loadChildren: './views/report/report.module#ReportModule'
@@ -77,6 +51,7 @@ export const routes: Routes = [
     ]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
