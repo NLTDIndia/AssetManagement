@@ -49,6 +49,7 @@ namespace Assetmanagement
         public Nullable<System.DateTime> DOJ { get; set; }
         public Nullable<System.DateTime> ConfirmationDate { get; set; }
         public Nullable<System.DateTime> RelievingDate { get; set; }
+        public string CorpId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> Users { get; set; }

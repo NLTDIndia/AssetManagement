@@ -18,11 +18,12 @@ namespace Assetmanagement.Controllers
         [Route("users/Authentication")]
         public IHttpActionResult UserValidation(UserModel userDetail)
         {
+            var corpId = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             var userInfo = (from u in db.Users
                             join e in db.Employees on u.EmployeeUserId equals e.UserId
                             join urm in db.UserRoleMaps on e.UserId equals urm.EmployeeUserId
                             join ur in db.UserRoles on urm.RoleId equals ur.Id
-                            where e.EmailAddress.Replace(" ", "#") == userDetail.UserId.Replace(" ", "#") && u.Password.Replace(" ","#") == userDetail.Password.Replace(" ", "#")
+                            where e.CorpId == corpId
                             select new UserModel
                             {
                                 UserId = e.UserId.ToString(),

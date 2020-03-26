@@ -312,6 +312,7 @@
           <Property Name="DOJ" Type="datetime" />
           <Property Name="ConfirmationDate" Type="datetime" />
           <Property Name="RelievingDate" Type="datetime" />
+          <Property Name="CorpId" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Entity">
           <Key>
@@ -423,19 +424,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
           <Property Name="AssetTagNumber" Type="nvarchar" MaxLength="255" />
           <Property Name="LocationName" Type="nvarchar" MaxLength="550" Nullable="false" />
         </EntityType>
-        <Association Name="FK__AssetAllo__Asset__52593CB8">
-          <End Role="Assets" Type="Self.Assets" Multiplicity="0..1" />
-          <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Assets">
-              <PropertyRef Name="AssetId" />
-            </Principal>
-            <Dependent Role="AssetAllocation">
-              <PropertyRef Name="AssetId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AssetAllo__Emplo__5165187F">
+        <Association Name="FK__AssetAllo__Emplo__619B8048">
           <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -447,7 +436,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetAllo__Locat__52593CB8">
+        <Association Name="FK__AssetAllo__Locat__628FA481">
           <End Role="AssetLocation" Type="Self.AssetLocation" Multiplicity="0..1" />
           <End Role="AssetAllocation" Type="Self.AssetAllocation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -459,7 +448,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetHist__Asset__5441852A">
+        <Association Name="FK__AssetHist__Asset__6477ECF3">
           <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="1" />
           <End Role="AssetHistory" Type="Self.AssetHistory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -471,7 +460,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetHist__Statu__5535A963">
+        <Association Name="FK__AssetHist__Statu__656C112C">
           <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="AssetHistory" Type="Self.AssetHistory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -483,7 +472,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetHist__Targe__5629CD9C">
+        <Association Name="FK__AssetHist__Targe__66603565">
           <End Role="AssetStatus" Type="Self.AssetStatus" Multiplicity="1" />
           <End Role="AssetHistory" Type="Self.AssetHistory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -567,7 +556,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetRequ__Asset__5EBF139D">
+        <Association Name="FK__AssetRequ__Asset__6EF57B66">
           <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="0..1" />
           <End Role="AssetRequestSpecification" Type="Self.AssetRequestSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -615,55 +604,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Assets__AssetReq__5AB9788F">
-          <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
-          <End Role="Assets" Type="Self.Assets" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AssetRequest">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Assets">
-              <PropertyRef Name="AssetRequestId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AssetSpec__Asset__3F115E1A">
-          <End Role="Assets" Type="Self.Assets" Multiplicity="0..1" />
-          <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Assets">
-              <PropertyRef Name="AssetId" />
-            </Principal>
-            <Dependent Role="AssetSpecification">
-              <PropertyRef Name="AssetId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AssetSpec__Asset__4D5F7D71">
-          <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
-          <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AssetType">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AssetSpecification">
-              <PropertyRef Name="AssetTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AssetSpec__Asset__74794A92">
-          <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="0..1" />
-          <End Role="AssetSpecification" Type="Self.AssetSpecification" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AssetTypeSpecification">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AssetSpecification">
-              <PropertyRef Name="AssetTypeSpecId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AssetType__Addon__6477ECF3">
+        <Association Name="FK__AssetType__Addon__70DDC3D8">
           <End Role="AssetTypeAddOns" Type="Self.AssetTypeAddOns" Multiplicity="0..1" />
           <End Role="AssetType" Type="Self.AssetType" Multiplicity="*" />
           <ReferentialConstraint>
@@ -675,7 +616,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__656C112C">
+        <Association Name="FK__AssetType__Asset__71D1E811">
           <End Role="AssetCategory" Type="Self.AssetCategory" Multiplicity="0..1" />
           <End Role="AssetType" Type="Self.AssetType" Multiplicity="*" />
           <ReferentialConstraint>
@@ -687,7 +628,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__66603565">
+        <Association Name="FK__AssetType__Asset__72C60C4A">
           <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
           <End Role="AssetTypeOtherSpecification" Type="Self.AssetTypeOtherSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -699,7 +640,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__6754599E">
+        <Association Name="FK__AssetType__Asset__73BA3083">
           <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
           <End Role="AssetTypeOtherSpecification" Type="Self.AssetTypeOtherSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -711,7 +652,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__68487DD7">
+        <Association Name="FK__AssetType__Asset__74AE54BC">
           <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
           <End Role="AssetTypeOtherSpecification" Type="Self.AssetTypeOtherSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -723,7 +664,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__693CA210">
+        <Association Name="FK__AssetType__Asset__75A278F5">
           <End Role="AssetRequest" Type="Self.AssetRequest" Multiplicity="0..1" />
           <End Role="AssetTypeOtherSpecification" Type="Self.AssetTypeOtherSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -735,7 +676,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__AssetType__Asset__6A30C649">
+        <Association Name="FK__AssetType__Asset__76969D2E">
           <End Role="AssetType" Type="Self.AssetType" Multiplicity="0..1" />
           <End Role="AssetTypeSpecification" Type="Self.AssetTypeSpecification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -868,27 +809,23 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
     [Vw_UnallocatedAssets].[LocationName] AS [LocationName]
     FROM [dbo].[Vw_UnallocatedAssets] AS [Vw_UnallocatedAssets]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__AssetAllo__Asset__52593CB8" Association="Self.FK__AssetAllo__Asset__52593CB8">
-            <End Role="Assets" EntitySet="Assets" />
-            <End Role="AssetAllocation" EntitySet="AssetAllocation" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AssetAllo__Emplo__5165187F" Association="Self.FK__AssetAllo__Emplo__5165187F">
+          <AssociationSet Name="FK__AssetAllo__Emplo__619B8048" Association="Self.FK__AssetAllo__Emplo__619B8048">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="AssetAllocation" EntitySet="AssetAllocation" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetAllo__Locat__52593CB8" Association="Self.FK__AssetAllo__Locat__52593CB8">
+          <AssociationSet Name="FK__AssetAllo__Locat__628FA481" Association="Self.FK__AssetAllo__Locat__628FA481">
             <End Role="AssetLocation" EntitySet="AssetLocation" />
             <End Role="AssetAllocation" EntitySet="AssetAllocation" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetHist__Asset__5441852A" Association="Self.FK__AssetHist__Asset__5441852A">
+          <AssociationSet Name="FK__AssetHist__Asset__6477ECF3" Association="Self.FK__AssetHist__Asset__6477ECF3">
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetHistory" EntitySet="AssetHistory" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetHist__Statu__5535A963" Association="Self.FK__AssetHist__Statu__5535A963">
+          <AssociationSet Name="FK__AssetHist__Statu__656C112C" Association="Self.FK__AssetHist__Statu__656C112C">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="AssetHistory" EntitySet="AssetHistory" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetHist__Targe__5629CD9C" Association="Self.FK__AssetHist__Targe__5629CD9C">
+          <AssociationSet Name="FK__AssetHist__Targe__66603565" Association="Self.FK__AssetHist__Targe__66603565">
             <End Role="AssetStatus" EntitySet="AssetStatus" />
             <End Role="AssetHistory" EntitySet="AssetHistory" />
           </AssociationSet>
@@ -916,7 +853,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecification" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetRequ__Asset__5EBF139D" Association="Self.FK__AssetRequ__Asset__5EBF139D">
+          <AssociationSet Name="FK__AssetRequ__Asset__6EF57B66" Association="Self.FK__AssetRequ__Asset__6EF57B66">
             <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecification" />
             <End Role="AssetRequestSpecification" EntitySet="AssetRequestSpecification" />
           </AssociationSet>
@@ -932,47 +869,31 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
             <End Role="AssetPaymentMode" EntitySet="AssetPaymentMode" />
             <End Role="AssetRequestPayments" EntitySet="AssetRequestPayments" />
           </AssociationSet>
-          <AssociationSet Name="FK__Assets__AssetReq__5AB9788F" Association="Self.FK__Assets__AssetReq__5AB9788F">
-            <End Role="AssetRequest" EntitySet="AssetRequest" />
-            <End Role="Assets" EntitySet="Assets" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AssetSpec__Asset__3F115E1A" Association="Self.FK__AssetSpec__Asset__3F115E1A">
-            <End Role="Assets" EntitySet="Assets" />
-            <End Role="AssetSpecification" EntitySet="AssetSpecification" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AssetSpec__Asset__4D5F7D71" Association="Self.FK__AssetSpec__Asset__4D5F7D71">
-            <End Role="AssetType" EntitySet="AssetType" />
-            <End Role="AssetSpecification" EntitySet="AssetSpecification" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AssetSpec__Asset__74794A92" Association="Self.FK__AssetSpec__Asset__74794A92">
-            <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecification" />
-            <End Role="AssetSpecification" EntitySet="AssetSpecification" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Addon__6477ECF3" Association="Self.FK__AssetType__Addon__6477ECF3">
+          <AssociationSet Name="FK__AssetType__Addon__70DDC3D8" Association="Self.FK__AssetType__Addon__70DDC3D8">
             <End Role="AssetTypeAddOns" EntitySet="AssetTypeAddOns" />
             <End Role="AssetType" EntitySet="AssetType" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__656C112C" Association="Self.FK__AssetType__Asset__656C112C">
+          <AssociationSet Name="FK__AssetType__Asset__71D1E811" Association="Self.FK__AssetType__Asset__71D1E811">
             <End Role="AssetCategory" EntitySet="AssetCategory" />
             <End Role="AssetType" EntitySet="AssetType" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__66603565" Association="Self.FK__AssetType__Asset__66603565">
+          <AssociationSet Name="FK__AssetType__Asset__72C60C4A" Association="Self.FK__AssetType__Asset__72C60C4A">
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetTypeOtherSpecification" EntitySet="AssetTypeOtherSpecification" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__6754599E" Association="Self.FK__AssetType__Asset__6754599E">
+          <AssociationSet Name="FK__AssetType__Asset__73BA3083" Association="Self.FK__AssetType__Asset__73BA3083">
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetTypeOtherSpecification" EntitySet="AssetTypeOtherSpecification" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__68487DD7" Association="Self.FK__AssetType__Asset__68487DD7">
+          <AssociationSet Name="FK__AssetType__Asset__74AE54BC" Association="Self.FK__AssetType__Asset__74AE54BC">
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetTypeOtherSpecification" EntitySet="AssetTypeOtherSpecification" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__693CA210" Association="Self.FK__AssetType__Asset__693CA210">
+          <AssociationSet Name="FK__AssetType__Asset__75A278F5" Association="Self.FK__AssetType__Asset__75A278F5">
             <End Role="AssetRequest" EntitySet="AssetRequest" />
             <End Role="AssetTypeOtherSpecification" EntitySet="AssetTypeOtherSpecification" />
           </AssociationSet>
-          <AssociationSet Name="FK__AssetType__Asset__6A30C649" Association="Self.FK__AssetType__Asset__6A30C649">
+          <AssociationSet Name="FK__AssetType__Asset__76969D2E" Association="Self.FK__AssetType__Asset__76969D2E">
             <End Role="AssetType" EntitySet="AssetType" />
             <End Role="AssetTypeSpecification" EntitySet="AssetTypeSpecification" />
           </AssociationSet>
@@ -1181,6 +1102,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
           <NavigationProperty Name="AssetHistories" Relationship="AMS1Model.FK__AssetHist__Statu__51300E55" FromRole="Employee" ToRole="AssetHistory" />
           <NavigationProperty Name="UserRoleMaps" Relationship="AMS1Model.FK_UserRoleMap_Employee" FromRole="Employee" ToRole="UserRoleMap" />
           <NavigationProperty Name="AssetAllocations" Relationship="AMS1Model.FK__AssetAllo__Emplo__619B8048" FromRole="Employee" ToRole="AssetAllocation" />
+          <Property Name="CorpId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__AssetType__Asset__628FA481">
           <End Role="AssetCategory" Type="Self.AssetCategory" Multiplicity="0..1" />
@@ -2132,6 +2054,7 @@ warning 6002: The table/view 'AssetManagement.dbo.Vw_UnallocatedAssets' does not
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="AMS1Model.Employee">
               <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="CorpId" ColumnName="CorpId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
                 <ScalarProperty Name="LoginId" ColumnName="LoginId" />

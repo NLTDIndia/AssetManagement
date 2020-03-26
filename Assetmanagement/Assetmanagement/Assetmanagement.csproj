@@ -206,6 +206,7 @@
     <Compile Include="Controllers\AssetTypeSpecificationController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\MaterializeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\RaisePoController.cs" />
     <Compile Include="Controllers\RaiseRequestController.cs" />
@@ -295,7 +296,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>false</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57006</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

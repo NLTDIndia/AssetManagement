@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Internal_Project\AMS\AssetMgmt_Baseline10_27_Feb_2019\AssetMgmt_Baseline10_27_Feb_2019\AMS_API\Assetmanagement\Assetmanagement\AMSEntitesModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\PROJECTS\Angular\AMS_github\Assetmanagement\Assetmanagement\AMSEntitesModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
