@@ -14,9 +14,9 @@ namespace Assetmanagement.Controllers
     {
         private AssetManagementEntities db = new AssetManagementEntities();
 
-        [HttpPost]
+        [HttpGet]
         [Route("users/Authentication")]
-        public IHttpActionResult UserValidation(UserModel userDetail)
+        public IHttpActionResult UserValidation()
         {
             var corpId = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             var userInfo = (from u in db.Users

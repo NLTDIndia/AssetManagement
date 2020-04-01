@@ -14,7 +14,7 @@ namespace Assetmanagement.Models
         public int CreatedBy { get; set; }
         public Nullable<System.DateTime> ActivationDate { get; set; }
         public Nullable<System.DateTime> ExpiryDate { get; set; }
-        public Int64 AssetTypeId { get; set; }
+        public Int64? AssetTypeId { get; set; }
         public IList<AssetRequestSpecModel> AssetSpec { get; set; }
     }
 }

@@ -819,7 +819,7 @@ namespace Assetmanagement.Controllers
                     {
                         long dbMaxAssetTagId = db.Assets.Where(a => a.AssetTagNumber != null).Count();
                         dbMaxAssetTagId = dbMaxAssetTagId + 1;
-                        var ATNumber = "Asset_" + dbMaxAssetTagId.ToString("D3");
+                        var ATNumber = "NLTI" + dbMaxAssetTagId.ToString("D3");
 
                         Asset asset = new Asset();
 
