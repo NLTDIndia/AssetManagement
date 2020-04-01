@@ -69,11 +69,5 @@
       </MenuItem>
     </children>
     </MenuItem>
-    <MenuItem name="USER PROFILE" url="/changepassword" icon="" role="" isMenuItem="true">
-    <children>
-      <MenuItem name="Change Password" url="/changepassword" icon="" role="all" isMenuItem="true">
-      </MenuItem>
-    </children>
-    </MenuItem>
-  </MenuList>
+     </MenuList>
 </Menu>
