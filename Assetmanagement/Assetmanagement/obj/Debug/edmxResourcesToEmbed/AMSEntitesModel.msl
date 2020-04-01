@@ -131,6 +131,7 @@
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="AMS1Model.Employee">
         <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
           <ScalarProperty Name="LoginId" ColumnName="LoginId" />

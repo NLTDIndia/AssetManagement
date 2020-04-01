@@ -184,6 +184,7 @@
     <NavigationProperty Name="AssetHistories" Relationship="AMS1Model.FK__AssetHist__Statu__51300E55" FromRole="Employee" ToRole="AssetHistory" />
     <NavigationProperty Name="UserRoleMaps" Relationship="AMS1Model.FK_UserRoleMap_Employee" FromRole="Employee" ToRole="UserRoleMap" />
     <NavigationProperty Name="AssetAllocations" Relationship="AMS1Model.FK__AssetAllo__Emplo__619B8048" FromRole="Employee" ToRole="AssetAllocation" />
+    <Property Name="CorpId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__AssetType__Asset__628FA481">
     <End Role="AssetCategory" Type="Self.AssetCategory" Multiplicity="0..1" />
